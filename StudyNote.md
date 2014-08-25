@@ -11,7 +11,7 @@
 1、nesC提供了atomic语句用于保护一小段代码不被抢占
 **但是这不意味着atomic语句块不会被抢占，如果两个atomic语句块使用不同的变量，则可以相互抢占**
 如：
-“'
+“`
 command void function1()
 {
   atomic
@@ -29,13 +29,8 @@ command void function2()
       d=c++;
     }
 }
-”'
+”`
 
 **如以上例子所示，function1可以抢占function2不可冒犯的原子性。但是function1不会抢占自身。即包含相同变量的的atomic代码块不能相互抢占执行**
 
-“`ruby
-  def add(a, b)
-      return a + b
-    end
-    “`
 
