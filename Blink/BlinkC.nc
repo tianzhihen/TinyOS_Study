@@ -59,14 +59,20 @@ implementation
 {
   event void Boot.booted()
   {
-    call Timer0.startPeriodic( 500 );
-    call Timer1.startPeriodic( 100 );
+    call Timer0.startPeriodic( 250 );
+    call Timer1.startPeriodic( 500 );
     call Timer2.startPeriodic( 1000 );
   }
-
+  task void computeTask()
+  {
+        uint32_t i=0;
+        for(i=0;i<40000;i++)
+        {;}
+  }
   event void Timer0.fired()
   {
     dbg("BlinkC", "Timer 0 fired @ %s.\n", sim_time_string());
+    post computeTask();
     call Leds.led0Toggle();
   }
 

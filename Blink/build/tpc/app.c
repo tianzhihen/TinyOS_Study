@@ -360,12 +360,12 @@ struct __sFILE {
 
   void *_cookie;
 
-  int (*_read)(struct _reent *arg_0x2abd561c9540, void *arg_0x2abd561c97e0, char *arg_0x2abd561c9a80, int arg_0x2abd561c9ce8);
+  int (*_read)(struct _reent *arg_0x2b95c9c42540, void *arg_0x2b95c9c427e0, char *arg_0x2b95c9c42a80, int arg_0x2b95c9c42ce8);
 
-  int (*_write)(struct _reent *arg_0x2abd561c8418, void *arg_0x2abd561c86b8, const char *arg_0x2abd561c8990, int arg_0x2abd561c8bf8);
+  int (*_write)(struct _reent *arg_0x2b95c9c41418, void *arg_0x2b95c9c416b8, const char *arg_0x2b95c9c41990, int arg_0x2b95c9c41bf8);
 
-  _fpos_t (*_seek)(struct _reent *arg_0x2abd561c7378, void *arg_0x2abd561c7618, _fpos_t arg_0x2abd561c78c8, int arg_0x2abd561c7b30);
-  int (*_close)(struct _reent *arg_0x2abd561cd290, void *arg_0x2abd561cd530);
+  _fpos_t (*_seek)(struct _reent *arg_0x2b95c9c40378, void *arg_0x2b95c9c40618, _fpos_t arg_0x2b95c9c408c8, int arg_0x2b95c9c40b30);
+  int (*_close)(struct _reent *arg_0x2b95c9c46290, void *arg_0x2b95c9c46530);
 
 
   struct __sbuf _ub;
@@ -428,7 +428,7 @@ struct _reent {
 
   int __sdidinit;
 
-  void (*__cleanup)(struct _reent *arg_0x2abd561d5568);
+  void (*__cleanup)(struct _reent *arg_0x2b95c9c4e568);
 
 
   struct _Bigint *_result;
@@ -480,7 +480,7 @@ struct _reent {
   struct _atexit _atexit0;
 
 
-  void (**_sig_func)(int arg_0x2abd561ddb30);
+  void (**_sig_func)(int arg_0x2b95c9c56b30);
 
 
 
@@ -492,7 +492,7 @@ struct _reent {
 struct _reent;
 struct _reent;
 # 26 "/home/wangqi/ARM_CROSS_/gcc-arm-none-eabi-4_7-2013q2/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/include/string.h" 3
-void *memset(void *arg_0x2abd561ed868, int arg_0x2abd561edad0, size_t arg_0x2abd561edd78);
+void *memset(void *arg_0x2b95c9c66868, int arg_0x2b95c9c66ad0, size_t arg_0x2b95c9c66d78);
 # 33 "/home/wangqi/ARM_CROSS_/gcc-arm-none-eabi-4_7-2013q2/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/include/stdlib.h" 3
 #line 29
 typedef struct __nesc_unnamed4248 {
@@ -923,11 +923,11 @@ static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__TimerFrom__
 #line 83
 static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__Timer__default__fired(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2abd56995e48);
+uint8_t arg_0x2b95ca40ee48);
 # 64 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
 static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__Timer__startPeriodic(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2abd56995e48, 
+uint8_t arg_0x2b95ca40ee48, 
 # 64 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
 uint32_t dt);
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
@@ -963,11 +963,11 @@ static void LedsP__Leds__led2Toggle(void );
 # 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
 static error_t SchedulerBasicP__TaskBasic__postTask(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x2abd564ed108);
+uint8_t arg_0x2b95c9f66108);
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void SchedulerBasicP__TaskBasic__default__runTask(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x2abd564ed108);
+uint8_t arg_0x2b95c9f66108);
 # 57 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Scheduler.nc"
 static void SchedulerBasicP__Scheduler__init(void );
 #line 72
@@ -978,6 +978,8 @@ static bool SchedulerBasicP__Scheduler__runNextTask(void );
 static void BlinkC__Timer0__fired(void );
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Boot.nc"
 static void BlinkC__Boot__booted(void );
+# 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
+static void BlinkC__computeTask__runTask(void );
 # 83 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
 static void BlinkC__Timer1__fired(void );
 #line 83
@@ -1103,7 +1105,7 @@ static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__TimerFrom__
 
 static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__Timer__fired(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2abd56995e48);
+uint8_t arg_0x2b95ca40ee48);
 #line 71
 enum /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0____nesc_unnamed4260 {
 #line 71
@@ -1317,13 +1319,13 @@ int main(void )   ;
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void SchedulerBasicP__TaskBasic__runTask(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x2abd564ed108);
+uint8_t arg_0x2b95c9f66108);
 # 76 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/McuSleep.nc"
 static void SchedulerBasicP__McuSleep__sleep(void );
 # 61 "/home/wangqi/platforms2013/tinyos-main/tos/system/SchedulerBasicP.nc"
 enum SchedulerBasicP____nesc_unnamed4264 {
 
-  SchedulerBasicP__NUM_TASKS = 3U, 
+  SchedulerBasicP__NUM_TASKS = 4U, 
   SchedulerBasicP__NO_TASK = 255
 };
 #line 104
@@ -1369,7 +1371,9 @@ static error_t SchedulerBasicP__TaskBasic__postTask(uint8_t id);
 static inline void SchedulerBasicP__TaskBasic__default__runTask(uint8_t id);
 # 64 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
 static void BlinkC__Timer0__startPeriodic(uint32_t dt);
-#line 64
+# 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
+static error_t BlinkC__computeTask__postTask(void );
+# 64 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
 static void BlinkC__Timer1__startPeriodic(uint32_t dt);
 # 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Leds.nc"
 static void BlinkC__Leds__led0Toggle(void );
@@ -1379,15 +1383,28 @@ static void BlinkC__Leds__led1Toggle(void );
 static void BlinkC__Leds__led2Toggle(void );
 # 64 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
 static void BlinkC__Timer2__startPeriodic(uint32_t dt);
-# 60 "BlinkC.nc"
+# 66 "BlinkC.nc"
+enum BlinkC____nesc_unnamed4266 {
+#line 66
+  BlinkC__computeTask = 3U
+};
+#line 66
+typedef int BlinkC____nesc_sillytask_computeTask[BlinkC__computeTask];
+#line 60
 static inline void BlinkC__Boot__booted(void );
 
 
 
 
 
+static void BlinkC__computeTask__runTask(void );
+
+
+
+
 
 static inline void BlinkC__Timer0__fired(void );
+
 
 
 
@@ -2058,10 +2075,26 @@ inline static void BlinkC__Leds__led0Toggle(void ){
 #line 67
 }
 #line 67
-# 67 "BlinkC.nc"
+# 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
+inline static error_t BlinkC__computeTask__postTask(void ){
+#line 67
+  unsigned char __nesc_result;
+#line 67
+
+#line 67
+  __nesc_result = SchedulerBasicP__TaskBasic__postTask(BlinkC__computeTask);
+#line 67
+
+#line 67
+  return __nesc_result;
+#line 67
+}
+#line 67
+# 72 "BlinkC.nc"
 static inline void BlinkC__Timer0__fired(void )
 {
   ;
+  BlinkC__computeTask__postTask();
   BlinkC__Leds__led0Toggle();
 }
 
@@ -2100,7 +2133,7 @@ inline static void BlinkC__Leds__led1Toggle(void ){
 #line 83
 }
 #line 83
-# 73 "BlinkC.nc"
+# 79 "BlinkC.nc"
 static inline void BlinkC__Timer1__fired(void )
 {
   ;
@@ -2142,7 +2175,7 @@ inline static void BlinkC__Leds__led2Toggle(void ){
 #line 100
 }
 #line 100
-# 79 "BlinkC.nc"
+# 85 "BlinkC.nc"
 static inline void BlinkC__Timer2__fired(void )
 {
   ;
@@ -2155,9 +2188,9 @@ static inline void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__Time
 }
 
 # 83 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
-inline static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__Timer__fired(uint8_t arg_0x2abd56995e48){
+inline static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__Timer__fired(uint8_t arg_0x2b95ca40ee48){
 #line 83
-  switch (arg_0x2abd56995e48) {
+  switch (arg_0x2b95ca40ee48) {
 #line 83
     case 0U:
 #line 83
@@ -2185,7 +2218,7 @@ inline static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__Time
 #line 83
     default:
 #line 83
-      /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__Timer__default__fired(arg_0x2abd56995e48);
+      /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC__0__Timer__default__fired(arg_0x2b95ca40ee48);
 #line 83
       break;
 #line 83
@@ -2429,8 +2462,8 @@ inline static void BlinkC__Timer0__startPeriodic(uint32_t dt){
 # 60 "BlinkC.nc"
 static inline void BlinkC__Boot__booted(void )
 {
-  BlinkC__Timer0__startPeriodic(500);
-  BlinkC__Timer1__startPeriodic(100);
+  BlinkC__Timer0__startPeriodic(250);
+  BlinkC__Timer1__startPeriodic(500);
   BlinkC__Timer2__startPeriodic(1000);
 }
 
@@ -2472,9 +2505,9 @@ static inline void SchedulerBasicP__TaskBasic__default__runTask(uint8_t id)
 }
 
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-inline static void SchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x2abd564ed108){
+inline static void SchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x2b95c9f66108){
 #line 75
-  switch (arg_0x2abd564ed108) {
+  switch (arg_0x2b95c9f66108) {
 #line 75
     case Max706P__wd_task:
 #line 75
@@ -2494,9 +2527,15 @@ inline static void SchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x2abd564ed10
 #line 75
       break;
 #line 75
+    case BlinkC__computeTask:
+#line 75
+      BlinkC__computeTask__runTask();
+#line 75
+      break;
+#line 75
     default:
 #line 75
-      SchedulerBasicP__TaskBasic__default__runTask(arg_0x2abd564ed108);
+      SchedulerBasicP__TaskBasic__default__runTask(arg_0x2b95c9f66108);
 #line 75
       break;
 #line 75
@@ -2771,6 +2810,19 @@ static bool SchedulerBasicP__Scheduler__runNextTask(void )
 #line 257
   SchedulerBasicP__TaskBasic__runTask(nextTask);
   return TRUE;
+}
+
+# 66 "BlinkC.nc"
+static void BlinkC__computeTask__runTask(void )
+{
+  uint32_t i = 0;
+
+#line 69
+  for (i = 0; i < 40000; i++) 
+    {
+#line 70
+      ;
+    }
 }
 
 # 74 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/AlarmToTimerC.nc"
