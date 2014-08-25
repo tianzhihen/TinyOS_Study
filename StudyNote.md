@@ -18,9 +18,9 @@
      a++;
      b=a+1;
     }
-}
+}“`
 
-command void function2()
+“`command void function2()
 {
   atomic
     {
@@ -29,11 +29,6 @@ command void function2()
     }
 }“`
 
-“`ruby
-  def add(a, b)
-      return a + b
-    end
-    “`
 **如以上例子所示，function1可以抢占function2不可冒犯的原子性。但是function1不会抢占自身。即包含相同变量的的atomic代码块不能相互抢占执行**
 
 
