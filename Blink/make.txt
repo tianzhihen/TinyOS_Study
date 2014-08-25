@@ -1,0 +1,68 @@
+mkdir -p build/tpc
+if [ -e "/home/fengle/platforms2013/tinyos-main/../3rd_party/libopencm3/Makefile" ]; then echo "    compiling libopencm3 for stm32" && make --directory=/home/fengle/platforms2013/tinyos-main/../3rd_party/libopencm3 'lib/stm32/f1';else exit 1; fi
+    compiling libopencm3 for stm32
+make[1]: 正在进入目录 `/home/fengle/platforms2013/3rd_party/libopencm3'
+printf "  GENHDR  include/libopencm3/stm32/f1/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/stm32/f1/irq.json;
+printf "  GENHDR  include/libopencm3/stm32/f4/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/stm32/f4/irq.json;
+printf "  GENHDR  include/libopencm3/stm32/f0/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/stm32/f0/irq.json;
+printf "  GENHDR  include/libopencm3/stm32/l1/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/stm32/l1/irq.json;
+printf "  GENHDR  include/libopencm3/stm32/f2/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/stm32/f2/irq.json;
+printf "  GENHDR  include/libopencm3/stm32/f3/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/stm32/f3/irq.json;
+printf "  GENHDR  include/libopencm3/lm3s/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/lm3s/irq.json;
+printf "  GENHDR  include/libopencm3/lpc13xx/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/lpc13xx/irq.json;
+printf "  GENHDR  include/libopencm3/efm32/efm32gg/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/efm32/efm32gg/irq.json;
+printf "  GENHDR  include/libopencm3/efm32/efm32g/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/efm32/efm32g/irq.json;
+printf "  GENHDR  include/libopencm3/efm32/efm32lg/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/efm32/efm32lg/irq.json;
+printf "  GENHDR  include/libopencm3/efm32/efm32tg/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/efm32/efm32tg/irq.json;
+printf "  GENHDR  include/libopencm3/lpc43xx/m0/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/lpc43xx/m0/irq.json;
+printf "  GENHDR  include/libopencm3/lpc43xx/m4/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/lpc43xx/m4/irq.json;
+printf "  GENHDR  include/libopencm3/lpc17xx/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/lpc17xx/irq.json;
+printf "  GENHDR  include/libopencm3/sam/3n/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/sam/3n/irq.json;
+printf "  GENHDR  include/libopencm3/sam/3u/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/sam/3u/irq.json;
+printf "  GENHDR  include/libopencm3/sam/3x/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/sam/3x/irq.json;
+printf "  GENHDR  include/libopencm3/sam/3s/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/sam/3s/irq.json;
+printf "  GENHDR  include/libopencm3/sam/3a/irq.json\n";
+./scripts/irq2nvic_h ./include/libopencm3/sam/3a/irq.json;
+printf "  BUILD   lib/stm32/f1\n";
+make --directory=lib/stm32/f1 SRCLIBDIR=/home/fengle/platforms2013/3rd_party/libopencm3/lib
+make[2]: 没有什么可以做的为 `all'。
+make[1]:正在离开目录 `/home/fengle/platforms2013/3rd_party/libopencm3'
+echo '-DIDENT_APPNAME=\"BlinkAppC\" -DIDENT_USERNAME=\"fengle\" -DIDENT_HOSTNAME=\"fengle-Vostro-3\" -DIDENT_USERHASH=0xd8be8613L -DIDENT_TIMESTAMP=0x53e0a4e0L -DIDENT_UIDHASH=0x07f363eeL' > build/tpc/ident_flags.txt
+echo "    compiling BlinkAppC to a tpc binary"
+ncc -o build/tpc/main.exe -O2 -fnesc-separator=__ -Wall -Wshadow -Wnesc-all -target=tpc -fnesc-cfile=build/tpc/app.c -board= -L/home/fengle/platforms2013/tinyos-main/tos/platforms/tpc -L/home/fengle/platforms2013/tinyos-main/../3rd_party/libopencm3/lib/stm32 -L/home/fengle/platforms2013/tinyos-main/../3rd_party/libopencm3/lib -DDEFINED_TOS_AM_GROUP=0x22 -DIDENT_APPNAME=\"BlinkAppC\" -DIDENT_USERNAME=\"fengle\" -DIDENT_HOSTNAME=\"fengle-Vostro-3\" -DIDENT_USERHASH=0xd8be8613L -DIDENT_TIMESTAMP=0x53e0a4e0L -DIDENT_UIDHASH=0x07f363eeL -DTINYOS -DSTM32 -DSTM32F1  -fno-common -Wl,--gc-sections -mcpu=cortex-m3 -mthumb -msoft-float \
+BlinkAppC.nc -lm -lc -lnosys -lopencm3_stm32f1 -L/home/fengle/platforms2013/tinyos-main/tos/platforms/tpc -T tpc-flash.x -I/home/fengle/platforms2013/tinyos-main/tos/platforms/tpc -I/home/fengle/platforms2013/tinyos-main/../3rd_party/libopencm3/include -I/home/fengle/platforms2013/tinyos-main/../3rd_party/libopencm3/include/libopencm3/stm32 -L/home/fengle/platforms2013/tinyos-main/tos/platforms/tpc -L/home/fengle/platforms2013/tinyos-main/../3rd_party/libopencm3/lib/stm32 -L/home/fengle/platforms2013/tinyos-main/../3rd_party/libopencm3/lib -nostartfiles -mthumb -mcpu=cortex-m3 -msoft-float  
+echo "    compiled BlinkAppC to build/tpc/main.exe"
+arm-none-eabi-objdump -h build/tpc/main.exe | perl -ne '$b{$1}=hex $2 if /^\s*\d+\s*\.(text|data|bss)\s+(\S+)/; END { printf("%16d bytes in ROM\n%16d bytes in RAM\n",$b{text}+$b{data},$b{data}+$b{bss}); }'
+:
+arm-none-eabi-objcopy -Oihex build/tpc/main.exe build/tpc/main.hex
+cmd () { echo "$@"; $@; }; if [ x = x ]; then cmd arm-none-eabi-objcopy --output-target=ihex build/tpc/main.exe build/tpc/main.hex.out; else cmd tos-set-symbols --objcopy arm-none-eabi-objcopy --objdump arm-none-eabi-objdump --target ihex build/tpc/main.exe build/tpc/main.hex.out TOS_NODE_ID= ActiveMessageAddressC__addr=; fi
+echo "    backup production meta info"
+export LD_LIBRARY_PATH=/home/fengle/.work/JLink_Linux_V480_x86_64:$LD_LIBRARY_PATH;productionRead () { perl -e 'open FH,"|/home/fengle/.work/JLink_Linux_V480_x86_64/JLinkExe -Device stm32f103rc -If SWD -Speed 2000" or die;print FH "r\n";print FH "savebin build/tpc/main.bin.out.sig,",sprintf("%X",0x8000000+0x0200),",",sprintf("%X",32),"\nq\n";close FH;' |perl -ne "print;exit 1 if /^(\*\*\*|Can|Info:).*((not connect)|unknown|Error)/;" && chmod +r build/tpc/main.bin.out.sig && perl -e 'open FH,"<build/tpc/main.bin.out.sig" or die $!;binmode FH;my $cnt=0;my $hexStr;my $chrStr;while(read FH,$tpbyte,1) {$hexStr.=sprintf "%02X ",ord($tpbyte);if ($tpbyte=~/[[:print:]]/) { $chrStr.=$tpbyte} else {$chrStr.="."} $cnt++;if ($cnt==16) {print "$hexStr |$chrStr|\n";$cnt=0;$hexStr="";$chrStr=""}}' |tee build/tpc/production.inf |grep '|';};FSIZE=`stat -c %s build/tpc/production.inf 2>/dev/null`;if [ x$FSIZE = x ] || [ x$FSIZE = x0 ];then productionRead;else echo "    build/tpc/production.inf already exists:";cat build/tpc/production.inf;echo "    use";echo "    1) current one exists";echo "    2) new one from node's flash";while [ 1 ];do echo -n "select:";read REPLY_SH;case $REPLY_SH in 1)cat build/tpc/production.inf;break;;2)productionRead;break;;esac;done;fi
+mv build/tpc/main.hex.out build/tpc/main.hex.out.noinf
+cat build/tpc/main.hex.out.noinf |perl -ne 'BEGIN { $i=0;$low_addr=0x0200;$cnt=32>>4;$line=2+($low_addr>>4);open FH,"<build/tpc/production.inf" or die "open build/tpc/production.inf failed";@inf=<FH>;close(FH);if (scalar @inf != $cnt) { die "production size dismatch";}} if ($. == $line) {my @li=split " ",$inf[$i]; my $cksum=256-hex(substr($_,41,2)); for (0..15) { $cksum+=hex($li[$_]); } print substr($_,0,9),@li[0..15],sprintf("%02X",(1 + ~$cksum) & 0xff),substr($_,43); $i++; if ($i < $cnt) { $low_addr+=16;$line++; } } else { print $_; }' > build/tpc/main.hex.out
+rm build/tpc/main.hex.out.noinf
+arm-none-eabi-objcopy -Iihex -Obinary build/tpc/main.hex.out build/tpc/main.bin.out
+echo "    installing tpc binary using J-Link"
+LD_LIBRARY_PATH=/home/fengle/.work/JLink_Linux_V480_x86_64:$LD_LIBRARY_PATH perl -e 'open FH,"|/home/fengle/.work/JLink_Linux_V480_x86_64/JLinkExe -Device stm32f103rc -If SWD -Speed 2000" or die;print FH "h\nloadbin build/tpc/main.bin.out 0x8000000\nr\ng\nq\n";close FH;' |perl -ne "print;exit 1 if /^(\*\*\*|Can|Info:).*((not connect)|unknown|Error)/;"
+rm -f build/tpc/main.bin.out build/tpc/main.hex.out
+:
+:
