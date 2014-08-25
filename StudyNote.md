@@ -10,7 +10,9 @@
 ###原子性代码
 1、nesC提供了atomic语句用于保护一小段代码不被抢占
 **但是这不意味着atomic语句块不会被抢占，如果两个atomic语句块使用不同的变量，则可以相互抢占**
+
 如：
+
 “`command void function1()
 {
   atomic
