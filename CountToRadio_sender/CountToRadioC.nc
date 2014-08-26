@@ -46,8 +46,8 @@
  **/
 
 #include "Timer.h"
-
-module BlinkC @safe()
+#include "CountToRadio.h"
+module CountToRadioC @safe()
 {
   uses interface Timer<TMilli> as Timer0;
   uses interface Leds;
@@ -55,14 +55,14 @@ module BlinkC @safe()
 
   uses interface AMSend;
   uses interface AMPacket;
-  uses interface ActiveMessageC;
 
   uses interface SplitControl as RadioControl;
 }
 implementation
 {
-  bool BUSY FALSE;
-  
+  bool BUSY = FALSE;
+  message_t msgpacket;
+  uint16_t counter;
 
   event void Boot.booted()
   {
@@ -81,15 +81,39 @@ implementation
     }
   }
 
-  event void stopDone(error_t error)
+  event void RadioControl.stopDone(error_t error)
   {
         
   }
 
   event void Timer0.fired()
   {
+    counter ++;
+    if(counter>=1000) counter=0;
     call Leds.led0Toggle();
-    
+    if(BUSY==FALSE)
+    {
+        CountStruct * sendpkt=(CountStruct* )call AMSend.getPayload(&msgpacket,NULL);
+        sendpkt->counter=counter;
+
+
+        if(call AMSend.send(AM_BROADCAST_ADDR, &msgpacket, sizeof(CountStruct))==SUCCESS)
+        {
+            BUSY=TRUE;
+        }
+
+    }
   }
+
+
+  event void AMSend.sendDone(message_t* msg, error_t error)
+  {
+    if(&msgpacket==msg) 
+    {
+        BUSY=FALSE;
+    }
+  }
+
+}
 
 
