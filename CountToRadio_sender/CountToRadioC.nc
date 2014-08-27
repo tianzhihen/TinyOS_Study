@@ -56,7 +56,9 @@ module CountToRadioC @safe()
   uses interface AMSend;
   uses interface AMPacket;
 
-  uses interface SplitControl as RadioControl;
+  uses interface Receive;
+
+  uses interface SplitControl as AMControl;
 }
 implementation
 {
@@ -66,22 +68,23 @@ implementation
 
   event void Boot.booted()
   {
-    call RadioControl.start();
+    call AMControl.start();
   }
 
-  event void RadioControl.startDone(error_t error)
+  event void AMControl.startDone(error_t error)
   {
-    if(error = SUCCESS)
+    if(error == SUCCESS)
     {
-        call Timer0.startPeriodic( 500 );
+        call Timer0.startPeriodic( TIMER_PERIOD_MILLI );
     }
     else
     {
-        call RadioControl.start();
+        call AMControl.start();
+        call Leds.set(0xff);
     }
   }
 
-  event void RadioControl.stopDone(error_t error)
+  event void AMControl.stopDone(error_t error)
   {
         
   }
@@ -89,28 +92,70 @@ implementation
   event void Timer0.fired()
   {
     counter ++;
-    if(counter>=1000) counter=0;
-    call Leds.led0Toggle();
-    if(BUSY==FALSE)
+    if(counter >= 1000) counter = 0;
+    if(BUSY == FALSE)
     {
         CountStruct * sendpkt=(CountStruct* )call AMSend.getPayload(&msgpacket,NULL);
+        if(sendpkt == NULL)
+        {
+            return;
+        }
         sendpkt->counter=counter;
 
 
         if(call AMSend.send(AM_BROADCAST_ADDR, &msgpacket, sizeof(CountStruct))==SUCCESS)
         {
-            BUSY=TRUE;
+            BUSY = TRUE;
         }
 
     }
+    else
+    {
+        return;
+    }
   }
 
-
+  event message_t* Receive.receive(message_t* msg, void* payload, uint8_t len)
+  {
+    if(len == sizeof(CountStruct))
+    {
+        CountStruct * receivepkt=(CountStruct* )payload;
+        if(receivepkt->counter & 0x01)
+        {
+            call Leds.led0On();
+        }
+        else
+        {
+            call Leds.led0Off();
+        }
+        if(receivepkt->counter & 0x02)
+        {
+            call Leds.led1On();
+        }
+        else
+        {
+            call Leds.led1Off();
+        }
+        if(receivepkt->counter & 0x04)
+        {
+            call Leds.led2On();
+        }
+        else
+        {
+            call Leds.led2Off();
+        }
+        return msg;
+    }
+    else
+    {
+        return msg;
+    }
+  }
   event void AMSend.sendDone(message_t* msg, error_t error)
   {
-    if(&msgpacket==msg) 
+    if(&msgpacket == msg) 
     {
-        BUSY=FALSE;
+        BUSY = FALSE;
     }
   }
 

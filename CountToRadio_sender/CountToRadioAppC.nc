@@ -47,22 +47,33 @@
  *
  * @author tinyos-help@millennium.berkeley.edu
  **/
-
+#include "CountToRadio.h"
 configuration CountToRadioAppC
 {
 }
 implementation
 {
   components MainC, CountToRadioC, LedsC;
+    
     CountToRadioC->MainC.Boot;
     CountToRadioC.Leds->LedsC;
+
   components new TimerMilliC() as Timer0;
+    
     CountToRadioC.Timer0 -> Timer0;
+  
   components ActiveMessageC;
-    CountToRadioC.RadioControl->ActiveMessageC;
+    
+    CountToRadioC.AMControl->ActiveMessageC;
+  
   components new AMSenderC(AM_Counter_Radio);
+    
     CountToRadioC.AMSend->AMSenderC;
     CountToRadioC.AMPacket->AMSenderC;
   
+  components new AMReceiverC(AM_Counter_Radio);
+    
+    CountToRadioC.Receive->AMReceiverC;
+
 }
 

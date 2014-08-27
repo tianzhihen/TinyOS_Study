@@ -243,11 +243,11 @@ typedef struct { unsigned char nxdata[2]; } __attribute__((packed)) nxle_uint16_
 typedef struct { unsigned char nxdata[4]; } __attribute__((packed)) nxle_uint32_t;typedef uint32_t __nesc_nxbase_nxle_uint32_t  ;
 typedef struct { unsigned char nxdata[8]; } __attribute__((packed)) nxle_uint64_t;typedef uint64_t __nesc_nxbase_nxle_uint64_t  ;
 # 117 "/home/wangqi/.work/3.4.4/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/4.8.1/../../../../avr/include/string.h" 3
-extern void *memcpy(void *arg_0x2b7642b861f0, const void *arg_0x2b7642b864c8, size_t arg_0x2b7642b86770);
+extern void *memcpy(void *arg_0x2b4d6f3781f0, const void *arg_0x2b4d6f3784c8, size_t arg_0x2b4d6f378770);
 
 
 
-extern void *memset(void *arg_0x2b7642b89020, int arg_0x2b7642b89288, size_t arg_0x2b7642b89530);
+extern void *memset(void *arg_0x2b4d6f37b020, int arg_0x2b4d6f37b288, size_t arg_0x2b4d6f37b530);
 # 71 "/home/wangqi/.work/3.4.4/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/4.8.1/../../../../avr/include/stdlib.h" 3
 #line 68
 typedef struct __nesc_unnamed4242 {
@@ -266,7 +266,7 @@ typedef struct __nesc_unnamed4243 {
 } ldiv_t;
 
 
-typedef int (*__compar_fn_t)(const void *arg_0x2b7642baf838, const void *arg_0x2b7642bafb10);
+typedef int (*__compar_fn_t)(const void *arg_0x2b4d6f3a1838, const void *arg_0x2b4d6f3a1b10);
 # 31 "/home/wangqi/platforms2013/tinyos-main/tos/system/tos.h"
 typedef uint8_t bool;
 enum __nesc_unnamed4244 {
@@ -288,1060 +288,6 @@ struct __nesc_attr_atleastonce {
 };
 #line 44
 struct __nesc_attr_exactlyonce {
-};
-# 416 "/home/wangqi/.work/3.4.4/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/4.8.1/../../../../avr/include/avr/iom128rfa1.h" 3
-struct __reg_TIFR0 {
-  unsigned int tov0 : 1;
-  unsigned int ocf0a : 1;
-  unsigned int ocf0b : 1;
-  unsigned int  : 5;
-};
-#line 438
-struct __reg_TIFR1 {
-  unsigned int tov1 : 1;
-  unsigned int ocf1a : 1;
-  unsigned int ocf1b : 1;
-  unsigned int ocf1c : 1;
-  unsigned int  : 1;
-  unsigned int icf1 : 1;
-  unsigned int  : 2;
-};
-#line 465
-struct __reg_TIFR2 {
-  unsigned int tov2 : 1;
-  unsigned int ocf2a : 1;
-  unsigned int ocf2b : 1;
-  unsigned int  : 5;
-};
-#line 487
-struct __reg_TIFR3 {
-  unsigned int tov3 : 1;
-  unsigned int ocf3a : 1;
-  unsigned int ocf3b : 1;
-  unsigned int ocf3c : 1;
-  unsigned int  : 1;
-  unsigned int icf3 : 1;
-  unsigned int  : 2;
-};
-#line 514
-struct __reg_TIFR4 {
-  unsigned int tov4 : 1;
-  unsigned int ocf4a : 1;
-  unsigned int ocf4b : 1;
-  unsigned int ocf4c : 1;
-  unsigned int  : 1;
-  unsigned int icf4 : 1;
-  unsigned int  : 2;
-};
-#line 541
-struct __reg_TIFR5 {
-  unsigned int tov5 : 1;
-  unsigned int ocf5a : 1;
-  unsigned int ocf5b : 1;
-  unsigned int ocf5c : 1;
-  unsigned int  : 1;
-  unsigned int icf5 : 1;
-  unsigned int  : 2;
-};
-#line 568
-struct __reg_PCIFR {
-  unsigned int pcif : 3;
-  unsigned int  : 5;
-};
-#line 588
-struct __reg_EIFR {
-  unsigned int intf : 8;
-};
-#line 612
-struct __reg_EIMSK {
-  unsigned int intm : 8;
-};
-#line 636
-struct __reg_GPIOR0 {
-  unsigned int gpior0 : 8;
-};
-#line 669
-struct __reg_EECR {
-  unsigned int eere : 1;
-  unsigned int eepe : 1;
-  unsigned int eempe : 1;
-  unsigned int eerie : 1;
-  unsigned int eepm : 2;
-  unsigned int  : 2;
-};
-#line 715
-struct __reg_GTCCR {
-  unsigned int psrsync : 1;
-  unsigned int psrasy : 1;
-  unsigned int  : 5;
-  unsigned int tsm : 1;
-};
-#line 739
-struct __reg_TCCR0A {
-  unsigned int wgm0 : 2;
-  unsigned int  : 2;
-  unsigned int com0b : 2;
-  unsigned int com0a : 2;
-};
-#line 764
-struct __reg_TCCR0B {
-  unsigned int cs0 : 3;
-  unsigned int wgm02 : 1;
-  unsigned int  : 2;
-  unsigned int foc0b : 1;
-  unsigned int foc0a : 1;
-};
-#line 832
-struct __reg_GPIOR1 {
-  unsigned int gpior1 : 8;
-};
-#line 856
-struct __reg_GPIOR2 {
-  unsigned int gpior2 : 8;
-};
-#line 880
-struct __reg_SPCR {
-  unsigned int spr : 2;
-  unsigned int cpha : 1;
-  unsigned int cpol : 1;
-  unsigned int mstr : 1;
-  unsigned int dord : 1;
-  unsigned int spe : 1;
-  unsigned int spie : 1;
-};
-#line 910
-struct __reg_SPSR {
-  unsigned int spi2x : 1;
-  unsigned int  : 5;
-  unsigned int wcol : 1;
-  unsigned int spif : 1;
-};
-#line 946
-struct __reg_ACSR {
-  unsigned int acis : 2;
-  unsigned int acic : 1;
-  unsigned int acie : 1;
-  unsigned int aci : 1;
-  unsigned int aco : 1;
-  unsigned int acbg : 1;
-  unsigned int acd : 1;
-};
-#line 976
-struct __reg_OCDR {
-  unsigned int ocdr : 8;
-};
-#line 1001
-struct __reg_SMCR {
-  unsigned int se : 1;
-  unsigned int sm : 3;
-  unsigned int  : 4;
-};
-#line 1023
-struct __reg_MCUSR {
-  unsigned int porf : 1;
-  unsigned int extrf : 1;
-  unsigned int borf : 1;
-  unsigned int wdrf : 1;
-  unsigned int jtrf : 1;
-  unsigned int  : 3;
-};
-#line 1049
-struct __reg_MCUCR {
-  unsigned int ivce : 1;
-  unsigned int ivsel : 1;
-  unsigned int  : 2;
-  unsigned int pud : 1;
-  unsigned int  : 2;
-  unsigned int jtd : 1;
-};
-#line 1074
-struct __reg_SPMCSR {
-  unsigned int spmen : 1;
-  unsigned int pgers : 1;
-  unsigned int pgwrt : 1;
-  unsigned int blbset : 1;
-  unsigned int rwwsre : 1;
-  unsigned int sigrd : 1;
-  unsigned int rwwsb : 1;
-  unsigned int spmie : 1;
-};
-#line 1105
-struct __reg_RAMPZ {
-  unsigned int rampz : 2;
-  unsigned int  : 6;
-};
-#line 1129
-struct __reg_SREG {
-  unsigned int c : 1;
-  unsigned int z : 1;
-  unsigned int n : 1;
-  unsigned int v : 1;
-  unsigned int s : 1;
-  unsigned int h : 1;
-  unsigned int t : 1;
-  unsigned int i : 1;
-};
-#line 1160
-struct __reg_WDTCSR {
-  unsigned int wdp : 3;
-  unsigned int wde : 1;
-  unsigned int wdce : 1;
-  unsigned int  : 1;
-  unsigned int wdie : 1;
-  unsigned int wdif : 1;
-};
-#line 1189
-struct __reg_CLKPR {
-  unsigned int clkps : 4;
-  unsigned int  : 3;
-  unsigned int clkpce : 1;
-};
-#line 1212
-struct __reg_PRR2 {
-  unsigned int prram : 4;
-  unsigned int  : 4;
-};
-#line 1233
-struct __reg_PRR0 {
-  unsigned int pradc : 1;
-  unsigned int prusart0 : 1;
-  unsigned int prspi : 1;
-  unsigned int prtim1 : 1;
-  unsigned int prpga : 1;
-  unsigned int prtim0 : 1;
-  unsigned int prtim2 : 1;
-  unsigned int prtwi : 1;
-};
-#line 1264
-struct __reg_PRR1 {
-  unsigned int prusart : 3;
-  unsigned int prtim3 : 1;
-  unsigned int prtim4 : 1;
-  unsigned int prtim5 : 1;
-  unsigned int prtrx24 : 1;
-  unsigned int  : 1;
-};
-#line 1292
-struct __reg_OSCCAL {
-  unsigned int cal : 8;
-};
-#line 1316
-struct __reg_BGCR {
-  unsigned int bgcal : 3;
-  unsigned int bgcal_fine : 4;
-  unsigned int  : 1;
-};
-#line 1341
-struct __reg_PCICR {
-  unsigned int pcie : 3;
-  unsigned int  : 5;
-};
-#line 1361
-struct __reg_EICRA {
-  unsigned int isc0 : 2;
-  unsigned int isc1 : 2;
-  unsigned int isc2 : 2;
-  unsigned int isc3 : 2;
-};
-#line 1388
-struct __reg_EICRB {
-  unsigned int isc4 : 2;
-  unsigned int isc5 : 2;
-  unsigned int isc6 : 2;
-  unsigned int isc7 : 2;
-};
-#line 1429
-struct __reg_PCMSK1 {
-  unsigned int pcint : 2;
-  unsigned int pcint1 : 6;
-};
-#line 1454
-struct __reg_PCMSK2 {
-  unsigned int pcint1 : 4;
-  unsigned int pcint2 : 4;
-};
-#line 1479
-struct __reg_TIMSK0 {
-  unsigned int toie0 : 1;
-  unsigned int ocie0a : 1;
-  unsigned int ocie0b : 1;
-  unsigned int  : 5;
-};
-#line 1501
-struct __reg_TIMSK1 {
-  unsigned int toie1 : 1;
-  unsigned int ocie1a : 1;
-  unsigned int ocie1b : 1;
-  unsigned int ocie1c : 1;
-  unsigned int  : 1;
-  unsigned int icie1 : 1;
-  unsigned int  : 2;
-};
-#line 1528
-struct __reg_TIMSK2 {
-  unsigned int toie2 : 1;
-  unsigned int ocie2a : 1;
-  unsigned int ocie2b : 1;
-  unsigned int  : 5;
-};
-#line 1551
-struct __reg_TIMSK3 {
-  unsigned int toie3 : 1;
-  unsigned int ocie3a : 1;
-  unsigned int ocie3b : 1;
-  unsigned int ocie3c : 1;
-  unsigned int  : 1;
-  unsigned int icie3 : 1;
-  unsigned int  : 2;
-};
-#line 1578
-struct __reg_TIMSK4 {
-  unsigned int toie4 : 1;
-  unsigned int ocie4a : 1;
-  unsigned int ocie4b : 1;
-  unsigned int ocie4c : 1;
-  unsigned int  : 1;
-  unsigned int icie4 : 1;
-  unsigned int  : 2;
-};
-#line 1605
-struct __reg_TIMSK5 {
-  unsigned int toie5 : 1;
-  unsigned int ocie5a : 1;
-  unsigned int ocie5b : 1;
-  unsigned int ocie5c : 1;
-  unsigned int  : 1;
-  unsigned int icie5 : 1;
-  unsigned int  : 2;
-};
-#line 1632
-struct __reg_NEMCR {
-  unsigned int  : 4;
-  unsigned int aeam : 2;
-  unsigned int eneam : 1;
-  unsigned int  : 1;
-};
-#line 1654
-struct __reg_ADCSRC {
-  unsigned int adsut : 5;
-  unsigned int res0 : 1;
-  unsigned int adtht : 2;
-};
-#line 1689
-struct __reg_ADCSRA {
-  unsigned int adps : 3;
-  unsigned int adie : 1;
-  unsigned int adif : 1;
-  unsigned int adate : 1;
-  unsigned int adsc : 1;
-  unsigned int aden : 1;
-};
-#line 1718
-struct __reg_ADCSRB {
-  unsigned int adts : 3;
-  unsigned int mux5 : 1;
-  unsigned int acch : 1;
-  unsigned int refok : 1;
-  unsigned int acme : 1;
-  unsigned int avddok : 1;
-};
-#line 1747
-struct __reg_ADMUX {
-  unsigned int mux : 5;
-  unsigned int adlar : 1;
-  unsigned int refs : 2;
-};
-#line 1773
-struct __reg_DIDR2 {
-  unsigned int adc8d : 1;
-  unsigned int adc9d : 1;
-  unsigned int adc10d : 1;
-  unsigned int adc11d : 1;
-  unsigned int adc12d : 1;
-  unsigned int adc13d : 1;
-  unsigned int adc14d : 1;
-  unsigned int adc15d : 1;
-};
-#line 1804
-struct __reg_DIDR0 {
-  unsigned int adc0d : 1;
-  unsigned int adc1d : 1;
-  unsigned int adc2d : 1;
-  unsigned int adc3d : 1;
-  unsigned int adc4d : 1;
-  unsigned int adc5d : 1;
-  unsigned int adc6d : 1;
-  unsigned int adc7d : 1;
-};
-#line 1835
-struct __reg_DIDR1 {
-  unsigned int ain0d : 1;
-  unsigned int ain1d : 1;
-  unsigned int  : 6;
-};
-#line 1855
-struct __reg_TCCR1A {
-  unsigned int wgm1 : 2;
-  unsigned int com1c : 2;
-  unsigned int com1b : 2;
-  unsigned int com1a : 2;
-};
-#line 1882
-struct __reg_TCCR1B {
-  unsigned int cs1 : 3;
-  unsigned int wgm1 : 2;
-  unsigned int  : 1;
-  unsigned int ices1 : 1;
-  unsigned int icnc1 : 1;
-};
-#line 1909
-struct __reg_TCCR1C {
-  unsigned int  : 5;
-  unsigned int foc1c : 1;
-  unsigned int foc1b : 1;
-  unsigned int foc1a : 1;
-};
-#line 1956
-struct __reg_TCCR3A {
-  unsigned int wgm3 : 2;
-  unsigned int com3c : 2;
-  unsigned int com3b : 2;
-  unsigned int com3a : 2;
-};
-#line 1983
-struct __reg_TCCR3B {
-  unsigned int cs3 : 3;
-  unsigned int wgm3 : 2;
-  unsigned int  : 1;
-  unsigned int ices3 : 1;
-  unsigned int icnc3 : 1;
-};
-#line 2010
-struct __reg_TCCR3C {
-  unsigned int  : 5;
-  unsigned int foc3c : 1;
-  unsigned int foc3b : 1;
-  unsigned int foc3a : 1;
-};
-#line 2057
-struct __reg_TCCR4A {
-  unsigned int wgm4 : 2;
-  unsigned int com4c : 2;
-  unsigned int com4b : 2;
-  unsigned int com4a : 2;
-};
-#line 2084
-struct __reg_TCCR4B {
-  unsigned int cs4 : 3;
-  unsigned int wgm4 : 2;
-  unsigned int  : 1;
-  unsigned int ices4 : 1;
-  unsigned int icnc4 : 1;
-};
-#line 2111
-struct __reg_TCCR4C {
-  unsigned int  : 5;
-  unsigned int foc4c : 1;
-  unsigned int foc4b : 1;
-  unsigned int foc4a : 1;
-};
-#line 2158
-struct __reg_TCCR2A {
-  unsigned int wgm2 : 2;
-  unsigned int  : 2;
-  unsigned int com2b : 2;
-  unsigned int com2a : 2;
-};
-#line 2183
-struct __reg_TCCR2B {
-  unsigned int cs2 : 3;
-  unsigned int wgm22 : 1;
-  unsigned int  : 2;
-  unsigned int foc2b : 1;
-  unsigned int foc2a : 1;
-};
-#line 2251
-struct __reg_ASSR {
-  unsigned int tcr2bub : 1;
-  unsigned int tcr2aub : 1;
-  unsigned int ocr2bub : 1;
-  unsigned int ocr2aub : 1;
-  unsigned int tcn2ub : 1;
-  unsigned int as2 : 1;
-  unsigned int exclk : 1;
-  unsigned int exclkamr : 1;
-};
-#line 2296
-struct __reg_TWSR {
-  unsigned int twps : 2;
-  unsigned int  : 1;
-  unsigned int tws : 5;
-};
-#line 2321
-struct __reg_TWAR {
-  unsigned int twgce : 1;
-  unsigned int twa : 7;
-};
-#line 2360
-struct __reg_TWCR {
-  unsigned int twie : 1;
-  unsigned int  : 1;
-  unsigned int twen : 1;
-  unsigned int twwc : 1;
-  unsigned int twsto : 1;
-  unsigned int twsta : 1;
-  unsigned int twea : 1;
-  unsigned int twint : 1;
-};
-#line 2390
-struct __reg_TWAMR {
-  unsigned int  : 1;
-  unsigned int twam : 7;
-};
-#line 2421
-struct __reg_UCSR0A {
-  unsigned int mpcm0 : 1;
-  unsigned int u2x0 : 1;
-  unsigned int upe0 : 1;
-  unsigned int dor0 : 1;
-  unsigned int fe0 : 1;
-  unsigned int udre0 : 1;
-  unsigned int txc0 : 1;
-  unsigned int rxc0 : 1;
-};
-#line 2452
-struct __reg_UCSR0B {
-  unsigned int txb80 : 1;
-  unsigned int rxb80 : 1;
-  unsigned int ucsz02 : 1;
-  unsigned int txen0 : 1;
-  unsigned int rxen0 : 1;
-  unsigned int udrie0 : 1;
-  unsigned int txcie0 : 1;
-  unsigned int rxcie0 : 1;
-};
-#line 2483
-struct __reg_UCSR0C {
-  unsigned int ucpol0 : 1;
-  unsigned int ucsz0 : 2;
-  unsigned int ucpha0 : 1;
-  unsigned int udord0 : 1;
-  unsigned int usbs0 : 1;
-  unsigned int upm0 : 2;
-  unsigned int umsel0 : 2;
-};
-#line 2538
-struct __reg_UCSR1A {
-  unsigned int mpcm1 : 1;
-  unsigned int u2x1 : 1;
-  unsigned int upe1 : 1;
-  unsigned int dor1 : 1;
-  unsigned int fe1 : 1;
-  unsigned int udre1 : 1;
-  unsigned int txc1 : 1;
-  unsigned int rxc1 : 1;
-};
-#line 2569
-struct __reg_UCSR1B {
-  unsigned int txb81 : 1;
-  unsigned int rxb81 : 1;
-  unsigned int ucsz12 : 1;
-  unsigned int txen1 : 1;
-  unsigned int rxen1 : 1;
-  unsigned int udrie1 : 1;
-  unsigned int txcie1 : 1;
-  unsigned int rxcie1 : 1;
-};
-#line 2600
-struct __reg_UCSR1C {
-  unsigned int ucpol1 : 1;
-  unsigned int ucsz1 : 2;
-  unsigned int ucpha1 : 1;
-  unsigned int udord1 : 1;
-  unsigned int usbs1 : 1;
-  unsigned int upm1 : 2;
-  unsigned int umsel1 : 2;
-};
-#line 2653
-struct __reg_SCCR0 {
-  unsigned int sccmp : 3;
-  unsigned int sctse : 1;
-  unsigned int sccksel : 1;
-  unsigned int scen : 1;
-  unsigned int scmbts : 1;
-  unsigned int scres : 1;
-};
-#line 2682
-struct __reg_SCCR1 {
-  unsigned int scenbo : 1;
-  unsigned int  : 7;
-};
-#line 2700
-struct __reg_SCSR {
-  unsigned int scbsy : 1;
-  unsigned int  : 7;
-};
-#line 2718
-struct __reg_SCIRQM {
-  unsigned int irqmcp : 3;
-  unsigned int irqmof : 1;
-  unsigned int irqmbo : 1;
-  unsigned int  : 3;
-};
-#line 2742
-struct __reg_SCIRQS {
-  unsigned int irqscp : 3;
-  unsigned int irqsof : 1;
-  unsigned int irqsbo : 1;
-  unsigned int  : 3;
-};
-#line 2766
-struct __reg_SCCNTLL {
-  unsigned int sccntll : 8;
-};
-#line 2790
-struct __reg_SCCNTLH {
-  unsigned int sccntlh : 8;
-};
-#line 2814
-struct __reg_SCCNTHL {
-  unsigned int sccnthl : 8;
-};
-#line 2838
-struct __reg_SCCNTHH {
-  unsigned int sccnthh : 8;
-};
-#line 2862
-struct __reg_SCBTSRLL {
-  unsigned int scbtsrll : 8;
-};
-#line 2886
-struct __reg_SCBTSRLH {
-  unsigned int scbtsrlh : 8;
-};
-#line 2910
-struct __reg_SCBTSRHL {
-  unsigned int scbtsrhl : 8;
-};
-#line 2934
-struct __reg_SCBTSRHH {
-  unsigned int scbtsrhh : 8;
-};
-#line 2958
-struct __reg_SCTSRLL {
-  unsigned int sctsrll : 8;
-};
-#line 2982
-struct __reg_SCTSRLH {
-  unsigned int sctsrlh : 8;
-};
-#line 3006
-struct __reg_SCTSRHL {
-  unsigned int sctsrhl : 8;
-};
-#line 3030
-struct __reg_SCTSRHH {
-  unsigned int sctsrhh : 8;
-};
-#line 3054
-struct __reg_SCOCR3LL {
-  unsigned int scocr3ll : 8;
-};
-#line 3078
-struct __reg_SCOCR3LH {
-  unsigned int scocr3lh : 8;
-};
-#line 3102
-struct __reg_SCOCR3HL {
-  unsigned int scocr3hl : 8;
-};
-#line 3126
-struct __reg_SCOCR3HH {
-  unsigned int scocr3hh : 8;
-};
-#line 3150
-struct __reg_SCOCR2LL {
-  unsigned int scocr2ll : 8;
-};
-#line 3174
-struct __reg_SCOCR2LH {
-  unsigned int scocr2lh : 8;
-};
-#line 3198
-struct __reg_SCOCR2HL {
-  unsigned int scocr2hl : 8;
-};
-#line 3222
-struct __reg_SCOCR2HH {
-  unsigned int scocr2hh : 8;
-};
-#line 3246
-struct __reg_SCOCR1LL {
-  unsigned int scocr1ll : 8;
-};
-#line 3270
-struct __reg_SCOCR1LH {
-  unsigned int scocr1lh : 8;
-};
-#line 3294
-struct __reg_SCOCR1HL {
-  unsigned int scocr1hl : 8;
-};
-#line 3318
-struct __reg_SCOCR1HH {
-  unsigned int scocr1hh : 8;
-};
-#line 3342
-struct __reg_TCCR5A {
-  unsigned int wgm5 : 2;
-  unsigned int com5c : 2;
-  unsigned int com5b : 2;
-  unsigned int com5a : 2;
-};
-#line 3369
-struct __reg_TCCR5B {
-  unsigned int cs5 : 3;
-  unsigned int wgm5 : 2;
-  unsigned int  : 1;
-  unsigned int ices5 : 1;
-  unsigned int icnc5 : 1;
-};
-#line 3396
-struct __reg_TCCR5C {
-  unsigned int  : 5;
-  unsigned int foc5c : 1;
-  unsigned int foc5b : 1;
-  unsigned int foc5a : 1;
-};
-#line 3443
-struct __reg_LLCR {
-  unsigned int llencal : 1;
-  unsigned int llshort : 1;
-  unsigned int lltco : 1;
-  unsigned int llcal : 1;
-  unsigned int llcomp : 1;
-  unsigned int lldone : 1;
-  unsigned int  : 2;
-};
-#line 3471
-struct __reg_LLDRL {
-  unsigned int lldrl : 4;
-  unsigned int  : 4;
-};
-#line 3492
-struct __reg_LLDRH {
-  unsigned int lldrh : 5;
-  unsigned int  : 3;
-};
-#line 3514
-struct __reg_DRTRAM3 {
-  unsigned int  : 4;
-  unsigned int endrt : 1;
-  unsigned int drtswok : 1;
-  unsigned int  : 2;
-};
-#line 3535
-struct __reg_DRTRAM2 {
-  unsigned int  : 4;
-  unsigned int endrt : 1;
-  unsigned int drtswok : 1;
-  unsigned int  : 2;
-};
-#line 3556
-struct __reg_DRTRAM1 {
-  unsigned int  : 4;
-  unsigned int endrt : 1;
-  unsigned int drtswok : 1;
-  unsigned int  : 2;
-};
-#line 3577
-struct __reg_DRTRAM0 {
-  unsigned int  : 4;
-  unsigned int endrt : 1;
-  unsigned int drtswok : 1;
-  unsigned int  : 2;
-};
-#line 3598
-struct __reg_DPDS0 {
-  unsigned int pbdrv : 2;
-  unsigned int pddrv : 2;
-  unsigned int pedrv : 2;
-  unsigned int pfdrv : 2;
-};
-#line 3625
-struct __reg_DPDS1 {
-  unsigned int pgdrv : 2;
-  unsigned int  : 6;
-};
-#line 3644
-struct __reg_TRXPR {
-  unsigned int trxrst : 1;
-  unsigned int slptr : 1;
-  unsigned int  : 6;
-};
-#line 3664
-struct __reg_AES_CTRL {
-  unsigned int  : 2;
-  unsigned int aes_im : 1;
-  unsigned int aes_dir : 1;
-  unsigned int  : 1;
-  unsigned int aes_mode : 1;
-  unsigned int  : 1;
-  unsigned int aes_request : 1;
-};
-#line 3697
-struct __reg_AES_STATUS {
-  unsigned int aes_done : 1;
-  unsigned int  : 6;
-  unsigned int aes_er : 1;
-};
-#line 3717
-struct __reg_AES_STATE {
-  unsigned int aes_state : 8;
-};
-#line 3741
-struct __reg_AES_KEY {
-  unsigned int aes_key : 8;
-};
-#line 3765
-struct __reg_TRX_STATUS {
-  unsigned int trx_status : 5;
-  unsigned int tst_status : 1;
-  unsigned int cca_status : 1;
-  unsigned int cca_done : 1;
-};
-#line 3813
-struct __reg_TRX_STATE {
-  unsigned int trx_cmd : 5;
-  unsigned int trac_status : 3;
-};
-#line 3859
-struct __reg_TRX_CTRL_1 {
-  unsigned int  : 5;
-  unsigned int tx_auto_crc_on : 1;
-  unsigned int irq_2_ext_en : 1;
-  unsigned int pa_ext_en : 1;
-};
-#line 3881
-struct __reg_PHY_TX_PWR {
-  unsigned int tx_pwr : 4;
-  unsigned int pa_lt : 2;
-  unsigned int pa_buf_lt : 2;
-};
-#line 3918
-struct __reg_PHY_RSSI {
-  unsigned int rssi : 5;
-  unsigned int rnd_value : 2;
-  unsigned int rx_crc_valid : 1;
-};
-#line 3952
-struct __reg_PHY_ED_LEVEL {
-  unsigned int ed_level : 8;
-};
-#line 3983
-struct __reg_PHY_CC_CCA {
-  unsigned int channel : 5;
-  unsigned int cca_mode : 2;
-  unsigned int cca_request : 1;
-};
-#line 4032
-struct __reg_CCA_THRES {
-  unsigned int cca_ed_thres : 4;
-  unsigned int cca_cs_thres : 4;
-};
-#line 4057
-struct __reg_RX_CTRL {
-  unsigned int pdt_thres : 4;
-  unsigned int  : 4;
-};
-#line 4083
-struct __reg_SFD_VALUE {
-  unsigned int sfd_value : 8;
-};
-#line 4111
-struct __reg_TRX_CTRL_2 {
-  unsigned int oqpsk_data_rate : 2;
-  unsigned int  : 5;
-  unsigned int rx_safe_mode : 1;
-};
-#line 4139
-struct __reg_ANT_DIV {
-  unsigned int ant_ctrl : 2;
-  unsigned int ant_ext_sw_en : 1;
-  unsigned int ant_div_en : 1;
-  unsigned int  : 3;
-  unsigned int ant_sel : 1;
-};
-#line 4174
-struct __reg_IRQ_MASK {
-  unsigned int pll_lock_en : 1;
-  unsigned int pll_unlock_en : 1;
-  unsigned int rx_start_en : 1;
-  unsigned int rx_end_en : 1;
-  unsigned int cca_ed_done_en : 1;
-  unsigned int ami_en : 1;
-  unsigned int tx_end_en : 1;
-  unsigned int awake_en : 1;
-};
-#line 4205
-struct __reg_IRQ_STATUS {
-  unsigned int pll_lock : 1;
-  unsigned int pll_unlock : 1;
-  unsigned int rx_start : 1;
-  unsigned int rx_end : 1;
-  unsigned int cca_ed_done : 1;
-  unsigned int ami : 1;
-  unsigned int tx_end : 1;
-  unsigned int awake : 1;
-};
-#line 4236
-struct __reg_VREG_CTRL {
-  unsigned int  : 2;
-  unsigned int dvdd_ok : 1;
-  unsigned int dvreg_ext : 1;
-  unsigned int  : 2;
-  unsigned int avdd_ok : 1;
-  unsigned int avreg_ext : 1;
-};
-#line 4268
-struct __reg_BATMON {
-  unsigned int batmon_vth : 4;
-  unsigned int batmon_hr : 1;
-  unsigned int batmon_ok : 1;
-  unsigned int bat_low_en : 1;
-  unsigned int bat_low : 1;
-};
-#line 4301
-struct __reg_XOSC_CTRL {
-  unsigned int xtal_trim : 4;
-  unsigned int xtal_mode : 4;
-};
-#line 4331
-struct __reg_RX_SYN {
-  unsigned int rx_pdt_level : 4;
-  unsigned int  : 3;
-  unsigned int rx_pdt_dis : 1;
-};
-#line 4359
-struct __reg_XAH_CTRL_1 {
-  unsigned int  : 1;
-  unsigned int aack_prom_mode : 1;
-  unsigned int aack_ack_time : 1;
-  unsigned int  : 1;
-  unsigned int aack_upld_res_ft : 1;
-  unsigned int aack_fltr_res_ft : 1;
-  unsigned int  : 2;
-};
-#line 4390
-struct __reg_FTN_CTRL {
-  unsigned int  : 7;
-  unsigned int ftn_start : 1;
-};
-#line 4408
-struct __reg_PLL_CF {
-  unsigned int  : 7;
-  unsigned int pll_cf_start : 1;
-};
-#line 4426
-struct __reg_PLL_DCU {
-  unsigned int  : 7;
-  unsigned int pll_dcu_start : 1;
-};
-#line 4444
-struct __reg_PART_NUM {
-  unsigned int part_num : 8;
-};
-#line 4472
-struct __reg_VERSION_NUM {
-  unsigned int version_num : 8;
-};
-#line 4501
-struct __reg_MAN_ID_0 {
-  unsigned int man_id_0 : 8;
-};
-#line 4529
-struct __reg_MAN_ID_1 {
-  unsigned int man_id_1 : 8;
-};
-#line 4557
-struct __reg_SHORT_ADDR_0 {
-  unsigned int short_addr_0 : 8;
-};
-#line 4581
-struct __reg_SHORT_ADDR_1 {
-  unsigned int short_addr_1 : 8;
-};
-#line 4605
-struct __reg_PAN_ID_0 {
-  unsigned int pan_id_0 : 8;
-};
-#line 4629
-struct __reg_PAN_ID_1 {
-  unsigned int pan_id_1 : 8;
-};
-#line 4653
-struct __reg_IEEE_ADDR_0 {
-  unsigned int ieee_addr_0 : 8;
-};
-#line 4677
-struct __reg_IEEE_ADDR_1 {
-  unsigned int ieee_addr_1 : 8;
-};
-#line 4701
-struct __reg_IEEE_ADDR_2 {
-  unsigned int ieee_addr_2 : 8;
-};
-#line 4725
-struct __reg_IEEE_ADDR_3 {
-  unsigned int ieee_addr_3 : 8;
-};
-#line 4749
-struct __reg_IEEE_ADDR_4 {
-  unsigned int ieee_addr_4 : 8;
-};
-#line 4773
-struct __reg_IEEE_ADDR_5 {
-  unsigned int ieee_addr_5 : 8;
-};
-#line 4797
-struct __reg_IEEE_ADDR_6 {
-  unsigned int ieee_addr_6 : 8;
-};
-#line 4821
-struct __reg_IEEE_ADDR_7 {
-  unsigned int ieee_addr_7 : 8;
-};
-#line 4845
-struct __reg_XAH_CTRL_0 {
-  unsigned int slotted_operation : 1;
-  unsigned int max_csma_retries : 3;
-  unsigned int max_frame_retries : 4;
-};
-#line 4876
-struct __reg_CSMA_SEED_0 {
-  unsigned int csma_seed_0 : 8;
-};
-#line 4900
-struct __reg_CSMA_SEED_1 {
-  unsigned int csma_seed_1 : 3;
-  unsigned int aack_i_am_coord : 1;
-  unsigned int aack_dis_ack : 1;
-  unsigned int aack_set_pd : 1;
-  unsigned int aack_fvn_mode : 2;
-};
-#line 4928
-struct __reg_CSMA_BE {
-  unsigned int min_be : 4;
-  unsigned int max_be : 4;
-};
-#line 4953
-struct __reg_TST_CTRL_DIGI {
-  unsigned int tst_ctrl_dig : 4;
-  unsigned int  : 4;
-};
-#line 4974
-struct __reg_TST_RX_LENGTH {
-  unsigned int rx_length : 8;
 };
 # 244 "/home/wangqi/.work/3.4.4/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/4.8.1/../../../../avr/include/avr/fuse.h" 3
 #line 239
@@ -1617,7 +563,7 @@ typedef struct __nesc_unnamed4260 {
 
 typedef uint8_t Atm128_ADCH_t;
 typedef uint8_t Atm128_ADCL_t;
-# 51 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/hardware.h"
+# 51 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa_cb/hardware.h"
 enum __nesc_unnamed4261 {
   TOS_SLEEP_NONE = ATM128_POWER_IDLE
 };
@@ -1817,92 +763,8 @@ typedef struct T62khz {
 } 
 #line 124
 T62khz;
-# 41 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.h"
+# 169 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa_cb/RadioConfig.h"
 enum __nesc_unnamed4276 {
-  ATM128_SPI_CLK_DIVIDE_4 = 0, 
-  ATM128_SPI_CLK_DIVIDE_16 = 1, 
-  ATM128_SPI_CLK_DIVIDE_64 = 2, 
-  ATM128_SPI_CLK_DIVIDE_128 = 3
-};
-#line 58
-#line 49
-typedef struct __nesc_unnamed4277 {
-  uint8_t spie : 1;
-  uint8_t spe : 1;
-  uint8_t dord : 1;
-  uint8_t mstr : 1;
-  uint8_t cpol : 1;
-  uint8_t cpha : 1;
-  uint8_t spr : 2;
-} 
-Atm128SPIControl_s;
-
-
-
-#line 59
-typedef union __nesc_unnamed4278 {
-  uint8_t flat;
-  Atm128SPIControl_s bits;
-} Atm128SPIControl_t;
-
-typedef Atm128SPIControl_t Atm128_SPCR_t;
-
-
-
-
-
-
-
-
-#line 67
-typedef struct __nesc_unnamed4279 {
-  uint8_t spif : 1;
-  uint8_t wcol : 1;
-  uint8_t rsvd : 5;
-  uint8_t spi2x : 1;
-} 
-Atm128SPIStatus_s;
-
-
-
-#line 74
-typedef union __nesc_unnamed4280 {
-  uint8_t flat;
-  Atm128SPIStatus_s bits;
-} Atm128SPIStatus_t;
-
-typedef Atm128SPIStatus_t Atm128_SPSR_t;
-
-typedef uint8_t Atm128_SPDR_t;
-# 33 "/home/wangqi/platforms2013/tinyos-main/tos/types/Resource.h"
-typedef uint8_t resource_client_id_t;
-# 42 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/radiox/RFA1DriverLayer.h"
-#line 39
-typedef nx_struct rfa1_header_t {
-
-  nxle_uint8_t length;
-} __attribute__((packed)) rfa1_header_t;
-
-
-
-
-
-
-
-
-
-#line 44
-typedef struct rfa1_metadata_t {
-
-  uint8_t lqi;
-  union  {
-
-    uint8_t power;
-    uint8_t rssi;
-  } ;
-} rfa1_metadata_t;
-# 171 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/RadioConfig.h"
-enum __nesc_unnamed4281 {
 
 
 
@@ -1914,13 +776,9 @@ enum __nesc_unnamed4281 {
 
 
 
-  RFA1_CCA_THRES_VALUE = 0xC7, 
-
-
-  RFA1_PA_BUF_LT = 3 << 6, 
-  RFA1_PA_LT = 0 << 4
+  RFA1_CCA_THRES_VALUE = 0xC7
 };
-#line 217
+#line 215
 typedef T62khz TRadio;
 typedef uint32_t tradio_size;
 # 45 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/TinyosNetworkLayer.h"
@@ -1930,7 +788,7 @@ typedef nx_struct network_header_t {
   nxle_uint8_t network;
 } __attribute__((packed)) network_header_t;
 # 40 "/home/wangqi/platforms2013/tinyos-main/tos/types/IeeeEui64.h"
-enum __nesc_unnamed4282 {
+enum __nesc_unnamed4277 {
 #line 40
   IEEE_EUI64_LENGTH = 8
 };
@@ -1952,9 +810,9 @@ typedef ieee_eui64_t ieee154_laddr_t;
 
 
 #line 51
-typedef struct __nesc_unnamed4283 {
+typedef struct __nesc_unnamed4278 {
   uint8_t ieee_mode : 2;
-  union __nesc_unnamed4284 {
+  union __nesc_unnamed4279 {
     ieee154_saddr_t saddr;
     ieee154_laddr_t laddr;
   } ieee_addr;
@@ -1962,7 +820,7 @@ typedef struct __nesc_unnamed4283 {
 
 
 
-enum __nesc_unnamed4285 {
+enum __nesc_unnamed4280 {
   IEEE154_BROADCAST_ADDR = 0xffff, 
   IEEE154_LINK_MTU = 127
 };
@@ -1973,7 +831,7 @@ struct ieee154_frame_addr {
   ieee154_panid_t ieee_dstpan;
 };
 
-enum __nesc_unnamed4286 {
+enum __nesc_unnamed4281 {
   IEEE154_MIN_HDR_SZ = 6
 };
 #line 86
@@ -2020,7 +878,7 @@ typedef uint8_t am_id_t;
 typedef uint8_t am_group_t;
 typedef uint16_t am_addr_t;
 
-enum __nesc_unnamed4287 {
+enum __nesc_unnamed4282 {
   AM_BROADCAST_ADDR = 0xffff
 };
 
@@ -2032,7 +890,7 @@ enum __nesc_unnamed4287 {
 
 
 
-enum __nesc_unnamed4288 {
+enum __nesc_unnamed4283 {
   TOS_AM_GROUP = 0x22, 
   TOS_AM_ADDRESS = 1
 };
@@ -2055,7 +913,7 @@ typedef struct antdiv_metadata_t {
   uint8_t ant_id;
 } antdiv_metadata_t;
 # 12 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/radiox/AntennaDiversityConfig.h"
-enum __nesc_unnamed4289 {
+enum __nesc_unnamed4284 {
   ANTDIV_TXMODE_MASK = 0x03, 
   ANTDIV_TXMODE_EX_MASK = 0x04, 
   ANTDIV_TXMODE_ANT0 = 2, 
@@ -2067,6 +925,31 @@ enum __nesc_unnamed4289 {
   ANTDIV_RXMODE_ANT1 = 1, 
   ANTDIV_RXMODE_MASK = 0x03
 };
+# 42 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/radiox/RFA1DriverLayer.h"
+#line 39
+typedef nx_struct rfa1_header_t {
+
+  nxle_uint8_t length;
+} __attribute__((packed)) rfa1_header_t;
+
+
+
+
+
+
+
+
+
+#line 44
+typedef struct rfa1_metadata_t {
+
+  uint8_t lqi;
+  union  {
+
+    uint8_t power;
+    uint8_t rssi;
+  } ;
+} rfa1_metadata_t;
 # 41 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/TimeStampingLayer.h"
 #line 38
 typedef struct timestamp_metadata_t {
@@ -2126,7 +1009,7 @@ typedef struct rfa1packet_metadata_t {
   rfa1_metadata_t rfa1;
 } rfa1packet_metadata_t;
 
-enum __nesc_unnamed4290 {
+enum __nesc_unnamed4285 {
 
   RFA1_TX_PWR_MASK = 0x0F, 
   RFA1_CHANNEL_MASK = 0x1F, 
@@ -2138,14 +1021,14 @@ typedef uint8_t uart_id_t;
 
 
 
-enum __nesc_unnamed4291 {
+enum __nesc_unnamed4286 {
   HDLC_FLAG_BYTE = 0x7e, 
   HDLC_CTLESC_BYTE = 0x7d
 };
 
 
 
-enum __nesc_unnamed4292 {
+enum __nesc_unnamed4287 {
   TOS_SERIAL_CLASSICAL_TYPE = 0, 
   TOS_SERIAL_SERVERLINK_TYPE = 1
 };
@@ -2157,7 +1040,7 @@ enum __nesc_unnamed4292 {
 
 
 
-enum __nesc_unnamed4293 {
+enum __nesc_unnamed4288 {
   TOS_SERIAL_ACTIVE_MESSAGE_ID = 0, 
   TOS_SERIAL_CC1000_ID = 1, 
   TOS_SERIAL_802_15_4_ID = 2, 
@@ -2165,7 +1048,7 @@ enum __nesc_unnamed4293 {
 };
 
 
-enum __nesc_unnamed4294 {
+enum __nesc_unnamed4289 {
   SERIAL_PROTO_ACK = 67, 
   SERIAL_PROTO_PACKET_ACK = 68, 
   SERIAL_PROTO_PACKET_NOACK = 69, 
@@ -2264,6 +1147,8 @@ typedef nx_struct message_t {
   nx_uint8_t footer[sizeof(message_footer_t )];
   nx_uint8_t metadata[sizeof(message_metadata_t )];
 } __attribute__((packed)) message_t;
+# 33 "/home/wangqi/platforms2013/tinyos-main/tos/types/Resource.h"
+typedef uint8_t resource_client_id_t;
 # 45 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/TimeSyncMessageLayer.h"
 typedef nx_int32_t timesync_relative_t;
 
@@ -2288,8 +1173,8 @@ typedef nx_struct timesync_footer_t {
     timesync_absolute_t absolute;
   } __attribute__((packed)) timestamp;
 } __attribute__((packed)) timesync_footer_t;
-typedef TMilli Max706P__TimerWD__precision_tag;
-enum /*TimerMilliP.AlarmMilli32C.MuxAlarm62khz32C*/MuxAlarm62khz32C__0____nesc_unnamed4295 {
+typedef TMilli WatchDogP__TimerWD__precision_tag;
+enum /*TimerMilliP.AlarmMilli32C.MuxAlarm62khz32C*/MuxAlarm62khz32C__0____nesc_unnamed4290 {
   MuxAlarm62khz32C__0__CLIENT_ID = 0U
 };
 typedef T62khz /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__precision_tag;
@@ -2397,7 +1282,7 @@ typedef /*RFA1DriverLayerC.SoftAckAlarmC.AtmegaAlarmC.AtmegaAlarmP*/AtmegaAlarmP
 typedef /*RFA1DriverLayerC.SoftAckAlarmC.AtmegaAlarmC.AtmegaAlarmP*/AtmegaAlarmP__2__precision_tag /*RFA1DriverLayerC.SoftAckAlarmC.AtmegaAlarmC.AtmegaAlarmP*/AtmegaAlarmP__2__Alarm__precision_tag;
 typedef /*RFA1DriverLayerC.SoftAckAlarmC.AtmegaAlarmC.AtmegaAlarmP*/AtmegaAlarmP__2__size_type /*RFA1DriverLayerC.SoftAckAlarmC.AtmegaAlarmC.AtmegaAlarmP*/AtmegaAlarmP__2__Alarm__size_type;
 typedef /*RFA1DriverLayerC.SoftAckAlarmC.AtmegaAlarmC.AtmegaAlarmP*/AtmegaAlarmP__2__size_type /*RFA1DriverLayerC.SoftAckAlarmC.AtmegaAlarmC.AtmegaAlarmP*/AtmegaAlarmP__2__HplAtmegaCounter__size_type;
-enum AMQueueP____nesc_unnamed4296 {
+enum AMQueueP____nesc_unnamed4291 {
   AMQueueP__NUM_CLIENTS = 1U
 };
 # 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
@@ -2410,64 +1295,28 @@ static error_t McuInitP__AdcInit__default__init(void );
 static error_t MeasureClockC__Init__init(void );
 #line 62
 static error_t RFA1RadioOffP__RFA1RadioOff__init(void );
-# 44 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeInput(
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-uint8_t arg_0x2b7642eb2c20);
-# 46 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-uint8_t arg_0x2b7642eb2c20);
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-uint8_t arg_0x2b7642eb2c20);
-# 41 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__clr(
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-uint8_t arg_0x2b7642eb2c20);
-# 42 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void /*AtmegaGeneralIOC.PortF*/AtmegaGeneralIOP__5__Pin__toggle(
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-uint8_t arg_0x2b7642eb2c20);
-# 46 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void /*AtmegaGeneralIOC.PortF*/AtmegaGeneralIOP__5__Pin__makeOutput(
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-uint8_t arg_0x2b7642eb2c20);
-# 46 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__makeOutput(
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-uint8_t arg_0x2b7642eb2c20);
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__set(
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-uint8_t arg_0x2b7642eb2c20);
-# 41 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__clr(
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-uint8_t arg_0x2b7642eb2c20);
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-static void Max706P__wd_task__runTask(void );
-# 60 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Boot.nc"
-static void Max706P__Boot__booted(void );
+static void WatchDogP__wd_task__runTask(void );
 # 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
-static error_t Max706P__Init__init(void );
+static error_t WatchDogP__WDInit__init(void );
+# 60 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Boot.nc"
+static void WatchDogP__Boot__booted(void );
 # 83 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
-static void Max706P__TimerWD__fired(void );
+static void WatchDogP__TimerWD__fired(void );
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__default__fired(
 # 49 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2b7642f63998);
+uint8_t arg_0x2b4d6f5d0998);
 # 103 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__startAt(
 # 49 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2b7642f63998, 
+uint8_t arg_0x2b4d6f5d0998, 
 # 103 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
 /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__size_type t0, /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__size_type dt);
 #line 73
 static void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__stop(
 # 49 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2b7642f63998);
+uint8_t arg_0x2b4d6f5d0998);
 # 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
 static error_t /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Init__init(void );
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
@@ -2584,82 +1433,21 @@ static void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__TimerFrom__fire
 #line 83
 static void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__default__fired(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2b76431ae108);
+uint8_t arg_0x2b4d6f832690);
 # 64 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
 static void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__startPeriodic(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2b76431ae108, 
+uint8_t arg_0x2b4d6f832690, 
 # 64 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
 uint32_t dt);
-# 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
-static error_t At45dbOffP__At45dbOff__init(void );
-# 102 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-static void At45dbOffP__Resource__granted(void );
-# 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__ResourceConfigure__configure(
-# 95 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/spi/Atm128SpiP.nc"
-uint8_t arg_0x2b764323c388);
-# 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__zeroTask__runTask(void );
-# 82 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/SpiPacket.nc"
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiPacket__default__sendDone(
-#line 75
-uint8_t * txBuf, 
-uint8_t * rxBuf, 
-
-
-
-
-
-uint16_t len, 
-error_t error);
-# 45 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/SpiByte.nc"
-static uint8_t /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiByte__write(uint8_t tx);
-# 109 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__dataReady(uint8_t data);
-# 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/McuPowerOverride.nc"
-static mcu_power_t HplAtm128SpiP__McuPowerOverride__lowestState(void );
-# 83 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-static void HplAtm128SpiP__SPI__initMaster(void );
-#line 122
-static void HplAtm128SpiP__SPI__setMasterBit(bool isMaster);
-#line 113
-static void HplAtm128SpiP__SPI__enableInterrupt(bool enabled);
-#line 97
-static uint8_t HplAtm128SpiP__SPI__read(void );
-#line 141
-static void HplAtm128SpiP__SPI__setMasterDoubleSpeed(bool on);
-#line 131
-static void HplAtm128SpiP__SPI__setClock(uint8_t speed);
-
-
-
-
-static bool HplAtm128SpiP__SPI__isInterruptPending(void );
-#line 125
-static void HplAtm128SpiP__SPI__setClockPolarity(bool highWhenIdle);
-#line 103
-static void HplAtm128SpiP__SPI__write(uint8_t data);
-#line 116
-static void HplAtm128SpiP__SPI__enableSpi(bool busOn);
-#line 128
-static void HplAtm128SpiP__SPI__setClockPhase(bool sampleOnTrailing);
-# 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
-static error_t /*Atm128SpiC.Arbiter.Queue*/FcfsResourceQueueC__0__Init__init(void );
-# 102 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-static void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__Resource__default__granted(
-# 51 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332de30);
-# 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-static void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__grantedTask__runTask(void );
-#line 67
+# 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
 static error_t SchedulerBasicP__TaskBasic__postTask(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x2b7642da8020);
+uint8_t arg_0x2b4d6f4c6020);
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void SchedulerBasicP__TaskBasic__default__runTask(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x2b7642da8020);
+uint8_t arg_0x2b4d6f4c6020);
 # 57 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Scheduler.nc"
 static void SchedulerBasicP__Scheduler__init(void );
 #line 72
@@ -2730,6 +1518,18 @@ static void LedsP__Leds__set(uint8_t val);
 static void LedsP__Leds__led0On(void );
 #line 89
 static void LedsP__Leds__led2On(void );
+# 46 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
+static void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(
+# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
+uint8_t arg_0x2b4d6f9963d0);
+# 40 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
+static void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(
+# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
+uint8_t arg_0x2b4d6f9963d0);
+# 41 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
+static void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__clr(
+# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
+uint8_t arg_0x2b4d6f9963d0);
 # 63 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageConfig.nc"
 static error_t RFA1RadioP__ActiveMessageConfig__checkFrame(message_t *msg);
 #line 40
@@ -2828,21 +1628,21 @@ static bool RFA1RadioP__RFA1DriverConfig__requiresRssiCca(message_t *msg);
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAlarm__default__fired(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0);
+uint8_t arg_0x2b4d6fb67df0);
 # 50 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAlarm__wait(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0, 
+uint8_t arg_0x2b4d6fb67df0, 
 # 50 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 tradio_size timeout);
 #line 45
 static bool /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAlarm__isFree(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0);
+uint8_t arg_0x2b4d6fb67df0);
 # 65 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static tradio_size /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAlarm__getNow(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0);
+uint8_t arg_0x2b4d6fb67df0);
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__Alarm__fired(void );
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/Tasklet.nc"
@@ -2874,7 +1674,7 @@ static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageL
 # 16 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Sniff.nc"
 static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Sniff__default__catch(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b7643600788, 
+am_id_t arg_0x2b4d6fbb6788, 
 # 12 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Sniff.nc"
 message_t * msg, 
 void * payload, 
@@ -2884,7 +1684,7 @@ uint8_t len);
 # 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/SendNotifier.nc"
 static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SendNotifier__default__aboutToSend(
 # 49 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b76435ff2f0, 
+am_id_t arg_0x2b4d6fbb52f0, 
 # 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/SendNotifier.nc"
 am_addr_t dest, 
 #line 57
@@ -2920,7 +1720,7 @@ uint8_t len);
 # 80 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 static error_t /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__AMSend__send(
 # 45 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b7643602020, 
+am_id_t arg_0x2b4d6fbb8020, 
 # 80 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -2941,7 +1741,7 @@ void *
 
 /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__AMSend__getPayload(
 # 45 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b7643602020, 
+am_id_t arg_0x2b4d6fbb8020, 
 # 132 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -2956,7 +1756,7 @@ message_t *
 
 /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Snoop__default__receive(
 # 47 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b7643601ca0, 
+am_id_t arg_0x2b4d6fbb7ca0, 
 # 71 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -2991,7 +1791,7 @@ message_t *
 
 /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Receive__default__receive(
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b7643601158, 
+am_id_t arg_0x2b4d6fbb7158, 
 # 71 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -3010,7 +1810,7 @@ message_t *
 
 /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__ReceiveDefault__default__receive(
 # 52 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b76435fe020, 
+am_id_t arg_0x2b4d6fbb3020, 
 # 71 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -3090,7 +1890,7 @@ message_t *
 
 /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SnoopDefault__default__receive(
 # 53 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b76435febb0, 
+am_id_t arg_0x2b4d6fbb3bb0, 
 # 71 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -3116,11 +1916,11 @@ static void /*RFA1RadioC.AutoResourceAcquireLayerC*/AutoResourceAcquireLayerC__0
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/BareSend.nc"
 static error_t /*RFA1RadioC.AutoResourceAcquireLayerC*/AutoResourceAcquireLayerC__0__BareSend__send(message_t *msg);
 # 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
-static error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__Init__init(void );
+static error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__Init__init(void );
 # 79 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceQueue.nc"
-static error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__enqueue(resource_client_id_t id);
+static error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__enqueue(resource_client_id_t id);
 #line 53
-static bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__isEmpty(void );
+static bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__isEmpty(void );
 
 
 
@@ -3129,7 +1929,7 @@ static bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__
 
 
 
-static bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__isEnqueued(resource_client_id_t id);
+static bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__isEnqueued(resource_client_id_t id);
 
 
 
@@ -3137,41 +1937,41 @@ static bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__
 
 
 
-static resource_client_id_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__dequeue(void );
+static resource_client_id_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__dequeue(void );
 # 53 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceRequested.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__default__requested(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__default__requested(
 # 52 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332a020);
+uint8_t arg_0x2b4d6fca6020);
 # 61 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceRequested.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__default__immediateRequested(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__default__immediateRequested(
 # 52 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332a020);
+uint8_t arg_0x2b4d6fca6020);
 # 65 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__default__unconfigure(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__default__unconfigure(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b7643329538);
+uint8_t arg_0x2b4d6fca5538);
 # 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__default__configure(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__default__configure(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b7643329538);
+uint8_t arg_0x2b4d6fca5538);
 # 120 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__release(
+static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__release(
 # 51 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332de30);
+uint8_t arg_0x2b4d6fca9e30);
 # 97 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__immediateRequest(
+static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__immediateRequest(
 # 51 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332de30);
+uint8_t arg_0x2b4d6fca9e30);
 # 88 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__request(
+static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__request(
 # 51 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332de30);
+uint8_t arg_0x2b4d6fca9e30);
 # 102 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__default__granted(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__default__granted(
 # 51 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332de30);
+uint8_t arg_0x2b4d6fca9e30);
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask__runTask(void );
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask__runTask(void );
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/BareSend.nc"
 static void /*RFA1RadioC.Ieee154MessageLayerC*/Ieee154MessageLayerC__0__SubSend__sendDone(message_t *msg, error_t error);
 # 42 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/BareReceive.nc"
@@ -3307,7 +2107,7 @@ static error_t /*RFA1RadioC.UniqueLayerC.UniqueLayerP*/UniqueLayerP__0__Init__in
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/NeighborhoodFlag.nc"
 static bool NeighborhoodP__NeighborhoodFlag__get(
 # 43 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/NeighborhoodP.nc"
-uint8_t arg_0x2b76437fd970, 
+uint8_t arg_0x2b4d6fdf8970, 
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/NeighborhoodFlag.nc"
 uint8_t idx);
 
@@ -3316,7 +2116,7 @@ uint8_t idx);
 
 static void NeighborhoodP__NeighborhoodFlag__set(
 # 43 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/NeighborhoodP.nc"
-uint8_t arg_0x2b76437fd970, 
+uint8_t arg_0x2b4d6fdf8970, 
 # 51 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/NeighborhoodFlag.nc"
 uint8_t idx);
 # 71 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/Neighborhood.nc"
@@ -3388,11 +2188,11 @@ static bool /*RFA1RadioC.SoftwareAddressRecognitionLayerC*/SoftwareAddressRecogn
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__RadioAlarm__default__fired(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0);
+uint8_t arg_0x2b4d6fb67df0);
 # 50 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__RadioAlarm__wait(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0, 
+uint8_t arg_0x2b4d6fb67df0, 
 # 50 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 tradio_size timeout);
 
@@ -3401,11 +2201,11 @@ tradio_size timeout);
 
 static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__RadioAlarm__cancel(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0);
+uint8_t arg_0x2b4d6fb67df0);
 # 45 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static bool /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__RadioAlarm__isFree(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0);
+uint8_t arg_0x2b4d6fb67df0);
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__Alarm__fired(void );
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/Tasklet.nc"
@@ -3464,13 +2264,13 @@ static uint8_t /*RFA1RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC__0__RadioPa
 # 55 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 static void /*RFA1RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC__0__PacketFlag__clear(
 # 42 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
-uint8_t arg_0x2b76439fd2f8, 
+uint8_t arg_0x2b4d7001e2f8, 
 # 55 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 message_t *msg);
 #line 40
 static bool /*RFA1RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC__0__PacketFlag__get(
 # 42 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
-uint8_t arg_0x2b76439fd2f8, 
+uint8_t arg_0x2b4d7001e2f8, 
 # 40 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 message_t *msg);
 
@@ -3484,7 +2284,7 @@ message_t *msg);
 
 static void /*RFA1RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC__0__PacketFlag__set(
 # 42 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
-uint8_t arg_0x2b76439fd2f8, 
+uint8_t arg_0x2b4d7001e2f8, 
 # 50 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 message_t *msg);
 # 20 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/radiox/AntennaDiversityConfig.nc"
@@ -3663,7 +2463,7 @@ error_t error);
 # 110 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x2b7643c48020, 
+am_id_t arg_0x2b4d70274020, 
 # 103 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -3676,7 +2476,7 @@ error_t error);
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Send.nc"
 static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__send(
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x2b7643c4ae18, 
+uint8_t arg_0x2b4d70276e18, 
 # 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -3694,7 +2494,7 @@ void *
 
 /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__getPayload(
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x2b7643c4ae18, 
+uint8_t arg_0x2b4d70276e18, 
 # 122 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -3703,7 +2503,7 @@ uint8_t len);
 #line 100
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__sendDone(
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x2b7643c4ae18, 
+uint8_t arg_0x2b4d70276e18, 
 # 96 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -3715,14 +2515,12 @@ static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__errorTask__runTask(void );
 #line 75
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__CancelTask__runTask(void );
 # 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
-static error_t PlatformP__Max706Init__init(void );
-#line 62
-static error_t PlatformP__At45dbInit__init(void );
+static error_t PlatformP__WDInit__init(void );
 #line 62
 static error_t PlatformP__LedsInit__init(void );
 #line 62
 static error_t PlatformP__McuInit__init(void );
-# 54 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/PlatformP.nc"
+# 51 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa_cb/PlatformP.nc"
 static inline error_t PlatformP__Init__init(void );
 # 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
 static error_t McuInitP__RadioInit__init(void );
@@ -3743,70 +2541,42 @@ uint16_t MeasureClockC__cycles;
 
 static inline error_t MeasureClockC__Init__init(void );
 #line 135
-enum MeasureClockC____nesc_unnamed4297 {
+enum MeasureClockC____nesc_unnamed4292 {
   MeasureClockC__MAGIC = 31250 / (16 / 8)
 };
 # 38 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/radiox/RFA1RadioOffP.nc"
 static inline error_t RFA1RadioOffP__RFA1RadioOff__init(void );
-# 50 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(uint8_t bit);
-static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__clr(uint8_t bit);
-
-
-static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeInput(uint8_t bit);
-
-static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(uint8_t bit);
-#line 52
-static __inline void /*AtmegaGeneralIOC.PortF*/AtmegaGeneralIOP__5__Pin__toggle(uint8_t bit);
-
-
-
-static __inline void /*AtmegaGeneralIOC.PortF*/AtmegaGeneralIOP__5__Pin__makeOutput(uint8_t bit);
-#line 50
-static __inline void /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__set(uint8_t bit);
-static __inline void /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__clr(uint8_t bit);
-
-
-
-
-static __inline void /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__makeOutput(uint8_t bit);
 # 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-static error_t Max706P__wd_task__postTask(void );
+static error_t WatchDogP__wd_task__postTask(void );
 # 64 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
-static void Max706P__TimerWD__startPeriodic(uint32_t dt);
-# 42 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void Max706P__WDI__toggle(void );
-
-
-
-static void Max706P__WDI__makeOutput(void );
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/max706/Max706P.nc"
-enum Max706P____nesc_unnamed4298 {
-#line 40
-  Max706P__wd_task = 0U
+static void WatchDogP__TimerWD__startPeriodic(uint32_t dt);
+# 25 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa_cb/WatchDogP.nc"
+enum WatchDogP____nesc_unnamed4293 {
+#line 25
+  WatchDogP__wd_task = 0U
 };
-#line 40
-typedef int Max706P____nesc_sillytask_wd_task[Max706P__wd_task];
-#line 18
-static inline error_t Max706P__Init__init(void );
-#line 34
-static inline void Max706P__Boot__booted(void );
+#line 25
+typedef int WatchDogP____nesc_sillytask_wd_task[WatchDogP__wd_task];
+#line 15
+static inline error_t WatchDogP__WDInit__init(void );
 
 
 
 
 
-static inline void Max706P__wd_task__runTask(void );
+static inline void WatchDogP__Boot__booted(void );
 
 
 
+static inline void WatchDogP__wd_task__runTask(void );
 
 
-static inline void Max706P__TimerWD__fired(void );
+
+static inline void WatchDogP__TimerWD__fired(void );
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__fired(
 # 49 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2b7642f63998);
+uint8_t arg_0x2b4d6f5d0998);
 # 109 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
 static /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__AlarmFrom__size_type /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__AlarmFrom__getNow(void );
 #line 103
@@ -3814,7 +2584,7 @@ static void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__AlarmFrom
 #line 73
 static void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__AlarmFrom__stop(void );
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-enum /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0____nesc_unnamed4299 {
+enum /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0____nesc_unnamed4294 {
   VirtualizeAlarmC__0__NUM_ALARMS = 1U
 };
 
@@ -3822,13 +2592,13 @@ enum /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0____nesc_unnamed42
 
 
 #line 58
-typedef struct /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0____nesc_unnamed4300 {
+typedef struct /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0____nesc_unnamed4295 {
   /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__size_type t0;
   /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__size_type dt;
 } /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__alarm_t;
 #line 80
 #line 76
-struct /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0____nesc_unnamed4301 {
+struct /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0____nesc_unnamed4296 {
   /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__alarm_t alarm[/*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__NUM_ALARMS];
   bool isset[/*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__NUM_ALARMS];
   bool is_signaling;
@@ -4123,7 +2893,7 @@ static void /*CounterMilli32C.TransformCounterC*/TransformCounterC__0__Counter__
 # 67 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/TransformCounterC.nc"
 /*CounterMilli32C.TransformCounterC*/TransformCounterC__0__upper_count_type /*CounterMilli32C.TransformCounterC*/TransformCounterC__0__m_upper;
 
-enum /*CounterMilli32C.TransformCounterC*/TransformCounterC__0____nesc_unnamed4302 {
+enum /*CounterMilli32C.TransformCounterC*/TransformCounterC__0____nesc_unnamed4297 {
 
   TransformCounterC__0__LOW_SHIFT_RIGHT = 6, 
   TransformCounterC__0__HIGH_SHIFT_LEFT = 8 * sizeof(/*CounterMilli32C.TransformCounterC*/TransformCounterC__0__from_size_type ) - /*CounterMilli32C.TransformCounterC*/TransformCounterC__0__LOW_SHIFT_RIGHT, 
@@ -4149,7 +2919,7 @@ static /*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0__Counter_
 /*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0__to_size_type /*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0__m_t0;
 /*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0__to_size_type /*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0__m_dt;
 
-enum /*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0____nesc_unnamed4303 {
+enum /*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0____nesc_unnamed4298 {
 
   TransformAlarmC__0__MAX_DELAY_LOG2 = 8 * sizeof(/*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0__from_size_type ) - 1 - 6, 
   TransformAlarmC__0__MAX_DELAY = (/*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0__to_size_type )1 << /*TimerMilliP.AlarmMilli32C.TransformAlarmC*/TransformAlarmC__0__MAX_DELAY_LOG2
@@ -4196,7 +2966,7 @@ static void /*TimerMilliP.AlarmToTimerC*/AlarmToTimerC__0__Alarm__stop(void );
 # 83 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
 static void /*TimerMilliP.AlarmToTimerC*/AlarmToTimerC__0__Timer__fired(void );
 # 74 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/AlarmToTimerC.nc"
-enum /*TimerMilliP.AlarmToTimerC*/AlarmToTimerC__0____nesc_unnamed4304 {
+enum /*TimerMilliP.AlarmToTimerC*/AlarmToTimerC__0____nesc_unnamed4299 {
 #line 74
   AlarmToTimerC__0__fired = 1U
 };
@@ -4238,16 +3008,16 @@ static void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__TimerFrom__stop
 
 static void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__fired(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2b76431ae108);
+uint8_t arg_0x2b4d6f832690);
 #line 71
-enum /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0____nesc_unnamed4305 {
+enum /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0____nesc_unnamed4300 {
 #line 71
   VirtualizeTimerC__0__updateFromTimer = 2U
 };
 #line 71
 typedef int /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0____nesc_sillytask_updateFromTimer[/*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__updateFromTimer];
 #line 53
-enum /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0____nesc_unnamed4306 {
+enum /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0____nesc_unnamed4301 {
 
   VirtualizeTimerC__0__NUM_TIMERS = 2U, 
   VirtualizeTimerC__0__END_OF_LIST = 255
@@ -4261,7 +3031,7 @@ enum /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0____nesc_unnamed4306 {
 
 
 #line 59
-typedef struct /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0____nesc_unnamed4307 {
+typedef struct /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0____nesc_unnamed4302 {
 
   uint32_t t0;
   uint32_t dt;
@@ -4297,198 +3067,6 @@ static void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__startTimer(uint
 static inline void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__startPeriodic(uint8_t num, uint32_t dt);
 #line 204
 static inline void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__default__fired(uint8_t num);
-# 19 "/home/wangqi/platforms2013/tinyos-main/tos/chips/at45dbx/At45dbOffP.nc"
-static inline void At45dbOffP__Resource__granted(void );
-
-static inline error_t At45dbOffP__At45dbOff__init(void );
-# 82 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/SpiPacket.nc"
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiPacket__sendDone(
-#line 75
-uint8_t * txBuf, 
-uint8_t * rxBuf, 
-
-
-
-
-
-uint16_t len, 
-error_t error);
-# 128 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setClockPhase(bool sampleOnTrailing);
-#line 83
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__initMaster(void );
-#line 113
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__enableInterrupt(bool enabled);
-#line 97
-static uint8_t /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__read(void );
-#line 141
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setMasterDoubleSpeed(bool on);
-#line 131
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setClock(uint8_t speed);
-
-
-
-
-static bool /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__isInterruptPending(void );
-#line 125
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setClockPolarity(bool highWhenIdle);
-#line 103
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__write(uint8_t data);
-#line 116
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__enableSpi(bool busOn);
-# 52 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/McuPowerState.nc"
-static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__McuPowerState__update(void );
-# 288 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/spi/Atm128SpiP.nc"
-enum /*Atm128SpiC.SpiMaster*/Atm128SpiP__0____nesc_unnamed4308 {
-#line 288
-  Atm128SpiP__0__zeroTask = 3U
-};
-#line 288
-typedef int /*Atm128SpiC.SpiMaster*/Atm128SpiP__0____nesc_sillytask_zeroTask[/*Atm128SpiC.SpiMaster*/Atm128SpiP__0__zeroTask];
-#line 103
-uint16_t /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__len;
-uint8_t * /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__txBuffer;
-uint8_t * /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__rxBuffer;
-uint16_t /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__pos;
-
-enum /*Atm128SpiC.SpiMaster*/Atm128SpiP__0____nesc_unnamed4309 {
-  Atm128SpiP__0__SPI_IDLE, 
-  Atm128SpiP__0__SPI_BUSY, 
-  Atm128SpiP__0__SPI_ATOMIC_SIZE = 10
-};
-
-
-
-
-
-
-
-
-
-
-static inline void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__startSpi(void );
-#line 167
-static uint8_t /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiByte__write(uint8_t tx);
-#line 243
-static inline error_t /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__sendNextPart(void );
-#line 288
-static inline void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__zeroTask__runTask(void );
-#line 343
-static inline 
-#line 342
-void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiPacket__default__sendDone(
-uint8_t *_txbuffer, uint8_t *_rxbuffer, 
-uint16_t _length, error_t _success);
-
-static inline void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__dataReady(uint8_t data);
-#line 386
-static inline void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__ResourceConfigure__configure(uint8_t id);
-# 46 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void HplAtm128SpiP__MOSI__makeOutput(void );
-#line 44
-static void HplAtm128SpiP__MISO__makeInput(void );
-
-static void HplAtm128SpiP__SCK__makeOutput(void );
-#line 46
-static void HplAtm128SpiP__SS__makeOutput(void );
-# 52 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/McuPowerState.nc"
-static void HplAtm128SpiP__Mcu__update(void );
-# 109 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-static void HplAtm128SpiP__SPI__dataReady(uint8_t data);
-# 44 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-static void HplAtm128SpiP__OSS__makeInput(void );
-#line 40
-static void HplAtm128SpiP__OSS__set(void );
-# 100 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline void HplAtm128SpiP__SPI__initMaster(void );
-#line 123
-static inline uint8_t HplAtm128SpiP__SPI__read(void );
-static inline void HplAtm128SpiP__SPI__write(uint8_t d);
-
-
-void __vector_24(void ) __attribute((signal))   ;
-
-
-
-
-static inline bool HplAtm128SpiP__SPI__isInterruptPending(void );
-
-
-
-
-
-
-
-static void HplAtm128SpiP__SPI__enableInterrupt(bool enabled);
-#line 155
-static void HplAtm128SpiP__SPI__enableSpi(bool enabled);
-#line 181
-static inline void HplAtm128SpiP__SPI__setMasterBit(bool isMaster);
-#line 194
-static inline void HplAtm128SpiP__SPI__setClockPolarity(bool highWhenIdle);
-#line 208
-static inline void HplAtm128SpiP__SPI__setClockPhase(bool sampleOnTrailing);
-#line 225
-static inline void HplAtm128SpiP__SPI__setClock(uint8_t v);
-#line 238
-static inline void HplAtm128SpiP__SPI__setMasterDoubleSpeed(bool on);
-
-
-
-
-
-
-
-
-static inline mcu_power_t HplAtm128SpiP__McuPowerOverride__lowestState(void );
-# 49 "/home/wangqi/platforms2013/tinyos-main/tos/system/FcfsResourceQueueC.nc"
-enum /*Atm128SpiC.Arbiter.Queue*/FcfsResourceQueueC__0____nesc_unnamed4310 {
-#line 49
-  FcfsResourceQueueC__0__NO_ENTRY = 0xFF
-};
-uint8_t /*Atm128SpiC.Arbiter.Queue*/FcfsResourceQueueC__0__resQ[1U];
-
-
-
-static inline error_t /*Atm128SpiC.Arbiter.Queue*/FcfsResourceQueueC__0__Init__init(void );
-# 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-static void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__ResourceConfigure__configure(
-# 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b7643329538);
-# 102 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-static void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__Resource__granted(
-# 51 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332de30);
-#line 68
-enum /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0____nesc_unnamed4311 {
-#line 68
-  SimpleArbiterP__0__grantedTask = 4U
-};
-#line 68
-typedef int /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0____nesc_sillytask_grantedTask[/*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__grantedTask];
-#line 62
-enum /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0____nesc_unnamed4312 {
-#line 62
-  SimpleArbiterP__0__RES_IDLE = 0, SimpleArbiterP__0__RES_GRANTING = 1, SimpleArbiterP__0__RES_BUSY = 2
-};
-#line 63
-enum /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0____nesc_unnamed4313 {
-#line 63
-  SimpleArbiterP__0__NO_RES = 0xFF
-};
-uint8_t /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__state = /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__RES_IDLE;
-uint8_t /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__resId = /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__NO_RES;
-#line 149
-static inline void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__grantedTask__runTask(void );
-
-
-
-
-
-
-
-
-static inline void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__Resource__default__granted(uint8_t id);
 # 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
 static error_t RealMainP__SoftwareInit__init(void );
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Boot.nc"
@@ -4506,18 +3084,18 @@ int main(void )   ;
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void SchedulerBasicP__TaskBasic__runTask(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x2b7642da8020);
+uint8_t arg_0x2b4d6f4c6020);
 # 76 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/McuSleep.nc"
 static void SchedulerBasicP__McuSleep__sleep(void );
 # 61 "/home/wangqi/platforms2013/tinyos-main/tos/system/SchedulerBasicP.nc"
-enum SchedulerBasicP____nesc_unnamed4314 {
+enum SchedulerBasicP____nesc_unnamed4303 {
 
-  SchedulerBasicP__NUM_TASKS = 12U, 
+  SchedulerBasicP__NUM_TASKS = 10U, 
   SchedulerBasicP__NO_TASK = 255
 };
 #line 104
 #line 83
-typedef struct SchedulerBasicP____nesc_unnamed4315 {
+typedef struct SchedulerBasicP____nesc_unnamed4304 {
   uint8_t m_padding[128];
   uint8_t m_head;
   uint8_t m_tail;
@@ -4694,6 +3272,14 @@ static inline void LedsP__Leds__led2On(void );
 static inline void LedsP__Leds__led2Off(void );
 #line 136
 static inline void LedsP__Leds__set(uint8_t val);
+# 50 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
+static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(uint8_t bit);
+static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__clr(uint8_t bit);
+
+
+
+
+static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(uint8_t bit);
 # 30 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/radiox/AntennaDiversityConfig.nc"
 static uint8_t RFA1RadioP__AntennaDiversityConfig__txModeGet(void );
 # 65 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
@@ -4911,7 +3497,7 @@ static inline void RFA1RadioP__RadioAlarm__fired(void );
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAlarm__fired(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0);
+uint8_t arg_0x2b4d6fb67df0);
 # 109 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
 static /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__Alarm__size_type /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__Alarm__getNow(void );
 #line 66
@@ -4920,7 +3506,7 @@ static void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__Alarm__start(/
 static void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__Tasklet__schedule(void );
 # 66 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
 uint8_t /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__state;
-enum /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0____nesc_unnamed4316 {
+enum /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0____nesc_unnamed4305 {
 
   RadioAlarmP__0__STATE_READY = 0, 
   RadioAlarmP__0__STATE_WAIT = 1, 
@@ -4975,7 +3561,7 @@ static error_t /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessa
 # 16 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Sniff.nc"
 static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Sniff__catch(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b7643600788, 
+am_id_t arg_0x2b4d6fbb6788, 
 # 12 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Sniff.nc"
 message_t * msg, 
 void * payload, 
@@ -4985,7 +3571,7 @@ uint8_t len);
 # 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/SendNotifier.nc"
 static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SendNotifier__aboutToSend(
 # 49 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b76435ff2f0, 
+am_id_t arg_0x2b4d6fbb52f0, 
 # 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/SendNotifier.nc"
 am_addr_t dest, 
 #line 57
@@ -4993,7 +3579,7 @@ message_t * msg);
 # 110 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__AMSend__sendDone(
 # 45 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b7643602020, 
+am_id_t arg_0x2b4d6fbb8020, 
 # 103 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -5012,7 +3598,7 @@ message_t *
 
 /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Snoop__receive(
 # 47 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b7643601ca0, 
+am_id_t arg_0x2b4d6fbb7ca0, 
 # 71 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -5071,7 +3657,7 @@ message_t *
 
 /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Receive__receive(
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b7643601158, 
+am_id_t arg_0x2b4d6fbb7158, 
 # 71 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -5090,7 +3676,7 @@ message_t *
 
 /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__ReceiveDefault__receive(
 # 52 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b76435fe020, 
+am_id_t arg_0x2b4d6fbb3020, 
 # 71 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -5109,7 +3695,7 @@ message_t *
 
 /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SnoopDefault__receive(
 # 53 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2b76435febb0, 
+am_id_t arg_0x2b4d6fbb3bb0, 
 # 71 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -5311,87 +3897,87 @@ static inline void /*RFA1RadioC.AutoResourceAcquireLayerC*/AutoResourceAcquireLa
 
 static inline void /*RFA1RadioC.AutoResourceAcquireLayerC*/AutoResourceAcquireLayerC__0__SubSend__sendDone(message_t *msg, error_t result);
 # 49 "/home/wangqi/platforms2013/tinyos-main/tos/system/FcfsResourceQueueC.nc"
-enum /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1____nesc_unnamed4317 {
+enum /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0____nesc_unnamed4306 {
 #line 49
-  FcfsResourceQueueC__1__NO_ENTRY = 0xFF
+  FcfsResourceQueueC__0__NO_ENTRY = 0xFF
 };
-uint8_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__resQ[1U];
-uint8_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qHead = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY;
-uint8_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qTail = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY;
+uint8_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__resQ[1U];
+uint8_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qHead = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY;
+uint8_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qTail = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY;
 
-static inline error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__Init__init(void );
-
-
-
-
-static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__isEmpty(void );
+static inline error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__Init__init(void );
 
 
 
-static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__isEnqueued(resource_client_id_t id);
+
+static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__isEmpty(void );
 
 
 
-static inline resource_client_id_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__dequeue(void );
+static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__isEnqueued(resource_client_id_t id);
+
+
+
+static inline resource_client_id_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__dequeue(void );
 #line 82
-static inline error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__enqueue(resource_client_id_t id);
+static inline error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__enqueue(resource_client_id_t id);
 # 53 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceRequested.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__requested(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__requested(
 # 52 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332a020);
+uint8_t arg_0x2b4d6fca6020);
 # 61 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceRequested.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__immediateRequested(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__immediateRequested(
 # 52 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332a020);
+uint8_t arg_0x2b4d6fca6020);
 # 65 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__unconfigure(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__unconfigure(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b7643329538);
+uint8_t arg_0x2b4d6fca5538);
 # 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__configure(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__configure(
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b7643329538);
+uint8_t arg_0x2b4d6fca5538);
 # 79 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceQueue.nc"
-static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue__enqueue(resource_client_id_t id);
+static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Queue__enqueue(resource_client_id_t id);
 #line 53
-static bool /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue__isEmpty(void );
+static bool /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Queue__isEmpty(void );
 #line 70
-static resource_client_id_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue__dequeue(void );
+static resource_client_id_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Queue__dequeue(void );
 # 102 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__granted(
+static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__granted(
 # 51 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2b764332de30);
+uint8_t arg_0x2b4d6fca9e30);
 # 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask__postTask(void );
+static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask__postTask(void );
 # 68 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-enum /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1____nesc_unnamed4318 {
+enum /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0____nesc_unnamed4307 {
 #line 68
-  SimpleArbiterP__1__grantedTask = 5U
+  SimpleArbiterP__0__grantedTask = 3U
 };
 #line 68
-typedef int /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1____nesc_sillytask_grantedTask[/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask];
+typedef int /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0____nesc_sillytask_grantedTask[/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask];
 #line 62
-enum /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1____nesc_unnamed4319 {
+enum /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0____nesc_unnamed4308 {
 #line 62
-  SimpleArbiterP__1__RES_IDLE = 0, SimpleArbiterP__1__RES_GRANTING = 1, SimpleArbiterP__1__RES_BUSY = 2
+  SimpleArbiterP__0__RES_IDLE = 0, SimpleArbiterP__0__RES_GRANTING = 1, SimpleArbiterP__0__RES_BUSY = 2
 };
 #line 63
-enum /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1____nesc_unnamed4320 {
+enum /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0____nesc_unnamed4309 {
 #line 63
-  SimpleArbiterP__1__NO_RES = 0xFF
+  SimpleArbiterP__0__NO_RES = 0xFF
 };
-uint8_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__RES_IDLE;
-uint8_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__NO_RES;
+uint8_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__RES_IDLE;
+uint8_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__NO_RES;
 
 
 
-static inline error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__request(uint8_t id);
+static inline error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__request(uint8_t id);
 #line 83
-static inline error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__immediateRequest(uint8_t id);
+static inline error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__immediateRequest(uint8_t id);
 #line 96
-static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__release(uint8_t id);
+static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__release(uint8_t id);
 #line 149
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask__runTask(void );
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask__runTask(void );
 
 
 
@@ -5400,15 +3986,15 @@ static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grante
 
 
 
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__default__granted(uint8_t id);
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__default__granted(uint8_t id);
 
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__default__requested(uint8_t id);
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__default__requested(uint8_t id);
 
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__default__immediateRequested(uint8_t id);
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__default__immediateRequested(uint8_t id);
 
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__default__configure(uint8_t id);
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__default__configure(uint8_t id);
 
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__default__unconfigure(uint8_t id);
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__default__unconfigure(uint8_t id);
 # 49 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioPacket.nc"
 static uint8_t /*RFA1RadioC.Ieee154MessageLayerC*/Ieee154MessageLayerC__0__RadioPacket__payloadLength(message_t *msg);
 #line 43
@@ -5505,7 +4091,7 @@ static inline network_header_t */*RFA1RadioC.TinyosNetworkLayerC*/TinyosNetworkL
 
 static error_t /*RFA1RadioC.TinyosNetworkLayerC*/TinyosNetworkLayerC__0__TinyosSend__send(message_t *msg);
 #line 145
-enum /*RFA1RadioC.TinyosNetworkLayerC*/TinyosNetworkLayerC__0____nesc_unnamed4321 {
+enum /*RFA1RadioC.TinyosNetworkLayerC*/TinyosNetworkLayerC__0____nesc_unnamed4310 {
 
 
   TinyosNetworkLayerC__0__PAYLOAD_OFFSET = sizeof(network_header_t )
@@ -5564,7 +4150,7 @@ static void /*RFA1RadioC.Ieee154PacketLayerC.Ieee154PacketLayerP*/Ieee154PacketL
 #line 43
 static uint8_t /*RFA1RadioC.Ieee154PacketLayerC.Ieee154PacketLayerP*/Ieee154PacketLayerP__0__SubPacket__headerLength(message_t *msg);
 # 57 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/Ieee154PacketLayerP.nc"
-enum /*RFA1RadioC.Ieee154PacketLayerC.Ieee154PacketLayerP*/Ieee154PacketLayerP__0____nesc_unnamed4322 {
+enum /*RFA1RadioC.Ieee154PacketLayerC.Ieee154PacketLayerP*/Ieee154PacketLayerP__0____nesc_unnamed4311 {
 
   Ieee154PacketLayerP__0__IEEE154_DATA_FRAME_MASK = (((IEEE154_TYPE_MASK << IEEE154_FCF_FRAME_TYPE)
    | (1 << IEEE154_FCF_INTRAPAN))
@@ -5827,29 +4413,29 @@ static void /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferL
 
 static void /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0__Tasklet__resume(void );
 # 144 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/MessageBufferLayerP.nc"
-enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4323 {
+enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4312 {
 #line 144
-  MessageBufferLayerP__0__stateDoneTask = 6U
+  MessageBufferLayerP__0__stateDoneTask = 4U
 };
 #line 144
 typedef int /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_sillytask_stateDoneTask[/*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0__stateDoneTask];
 #line 189
-enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4324 {
+enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4313 {
 #line 189
-  MessageBufferLayerP__0__sendTask = 7U
+  MessageBufferLayerP__0__sendTask = 5U
 };
 #line 189
 typedef int /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_sillytask_sendTask[/*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0__sendTask];
 #line 322
-enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4325 {
+enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4314 {
 #line 322
-  MessageBufferLayerP__0__deliverTask = 8U
+  MessageBufferLayerP__0__deliverTask = 6U
 };
 #line 322
 typedef int /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_sillytask_deliverTask[/*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0__deliverTask];
 #line 63
 uint8_t /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0__state;
-enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4326 {
+enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4315 {
 
   MessageBufferLayerP__0__STATE_READY = 0, 
   MessageBufferLayerP__0__STATE_TX_PENDING = 1, 
@@ -5878,7 +4464,7 @@ error_t /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayer
 uint8_t /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0__retries;
 
 
-enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4327 {
+enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4316 {
 #line 187
   MessageBufferLayerP__0__MAX_RETRIES = 5
 };
@@ -5899,7 +4485,7 @@ static void /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferL
 
 static inline void /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0__Tasklet__run(void );
 #line 291
-enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4328 {
+enum /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBufferLayerP__0____nesc_unnamed4317 {
 
   MessageBufferLayerP__0__RECEIVE_QUEUE_SIZE = 3
 };
@@ -5975,15 +4561,15 @@ static void /*RFA1RadioC.CollisionAvoidanceLayerC.RandomCollisionLayerP*/RandomC
 # 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
 static error_t /*RFA1RadioC.CollisionAvoidanceLayerC.RandomCollisionLayerP*/RandomCollisionLayerP__0__calcNextRandom__postTask(void );
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/layers/RandomCollisionLayerP.nc"
-enum /*RFA1RadioC.CollisionAvoidanceLayerC.RandomCollisionLayerP*/RandomCollisionLayerP__0____nesc_unnamed4329 {
+enum /*RFA1RadioC.CollisionAvoidanceLayerC.RandomCollisionLayerP*/RandomCollisionLayerP__0____nesc_unnamed4318 {
 #line 78
-  RandomCollisionLayerP__0__calcNextRandom = 9U
+  RandomCollisionLayerP__0__calcNextRandom = 7U
 };
 #line 78
 typedef int /*RFA1RadioC.CollisionAvoidanceLayerC.RandomCollisionLayerP*/RandomCollisionLayerP__0____nesc_sillytask_calcNextRandom[/*RFA1RadioC.CollisionAvoidanceLayerC.RandomCollisionLayerP*/RandomCollisionLayerP__0__calcNextRandom];
 #line 57
 uint8_t /*RFA1RadioC.CollisionAvoidanceLayerC.RandomCollisionLayerP*/RandomCollisionLayerP__0__state;
-enum /*RFA1RadioC.CollisionAvoidanceLayerC.RandomCollisionLayerP*/RandomCollisionLayerP__0____nesc_unnamed4330 {
+enum /*RFA1RadioC.CollisionAvoidanceLayerC.RandomCollisionLayerP*/RandomCollisionLayerP__0____nesc_unnamed4319 {
 
   RandomCollisionLayerP__0__STATE_READY = 0, 
   RandomCollisionLayerP__0__STATE_TX_PENDING_FIRST = 1, 
@@ -6089,7 +4675,7 @@ static void /*RFA1RadioC.SoftwareAckLayerC*/SoftwareAckLayerC__0__RadioSend__sen
 static uint8_t /*RFA1RadioC.SoftwareAckLayerC*/SoftwareAckLayerC__0__RFA1Packet__payloadLength(message_t *msg);
 # 61 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/radiox/SoftwareAckLayerC.nc"
 uint8_t /*RFA1RadioC.SoftwareAckLayerC*/SoftwareAckLayerC__0__state;
-enum /*RFA1RadioC.SoftwareAckLayerC*/SoftwareAckLayerC__0____nesc_unnamed4331 {
+enum /*RFA1RadioC.SoftwareAckLayerC*/SoftwareAckLayerC__0____nesc_unnamed4320 {
 
   SoftwareAckLayerC__0__STATE_READY = 0, 
   SoftwareAckLayerC__0__STATE_DATA_SEND = 1, 
@@ -6144,7 +4730,7 @@ static inline message_t */*RFA1RadioC.SoftwareAddressRecognitionLayerC*/Software
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__RadioAlarm__fired(
 # 54 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2b764358ddf0);
+uint8_t arg_0x2b4d6fb67df0);
 # 66 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__Alarm__start(/*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__Alarm__size_type dt);
 
@@ -6158,7 +4744,7 @@ static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__Ala
 static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__Tasklet__schedule(void );
 # 66 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
 uint8_t /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__state;
-enum /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1____nesc_unnamed4332 {
+enum /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1____nesc_unnamed4321 {
 
   RadioAlarmP__1__STATE_READY = 0, 
   RadioAlarmP__1__STATE_WAIT = 1, 
@@ -6536,7 +5122,7 @@ static rfa1_metadata_t *RFA1DriverLayerP__getMeta(message_t *msg);
 
 
 uint8_t RFA1DriverLayerP__state;
-enum RFA1DriverLayerP____nesc_unnamed4333 {
+enum RFA1DriverLayerP____nesc_unnamed4322 {
 
   RFA1DriverLayerP__STATE_P_ON = 0, 
   RFA1DriverLayerP__STATE_SLEEP = 1, 
@@ -6549,7 +5135,7 @@ enum RFA1DriverLayerP____nesc_unnamed4333 {
 };
 
 uint8_t RFA1DriverLayerP__cmd;
-enum RFA1DriverLayerP____nesc_unnamed4334 {
+enum RFA1DriverLayerP____nesc_unnamed4323 {
 
   RFA1DriverLayerP__CMD_NONE = 0, 
   RFA1DriverLayerP__CMD_TURNOFF = 1, 
@@ -6564,7 +5150,7 @@ enum RFA1DriverLayerP____nesc_unnamed4334 {
   RFA1DriverLayerP__CMD_CAL = 10
 };
 
-enum RFA1DriverLayerP____nesc_unnamed4335 {
+enum RFA1DriverLayerP____nesc_unnamed4324 {
   RFA1DriverLayerP__IRQ_NONE = 0, 
   RFA1DriverLayerP__IRQ_AWAKE = 1, 
   RFA1DriverLayerP__IRQ_TX_END = 2, 
@@ -6576,7 +5162,7 @@ enum RFA1DriverLayerP____nesc_unnamed4335 {
   RFA1DriverLayerP__IRQ_PLL_LOCK = 128
 };
 
-enum RFA1DriverLayerP____nesc_unnamed4336 {
+enum RFA1DriverLayerP____nesc_unnamed4325 {
 
   RFA1DriverLayerP__RFA1RADIOON = 0U
 };
@@ -6615,7 +5201,7 @@ static __inline void RFA1DriverLayerP__changeState(void );
 #line 419
 static inline error_t RFA1DriverLayerP__RadioState__turnOn(void );
 #line 435
-enum RFA1DriverLayerP____nesc_unnamed4337 {
+enum RFA1DriverLayerP____nesc_unnamed4326 {
 
   RFA1DriverLayerP__TX_SFD_DELAY = 11
 };
@@ -6930,7 +5516,7 @@ static inline void */*CountToRadioAppC.AMSenderC.SenderC.AMQueueEntryP*/AMQueueE
 # 80 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__send(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x2b7643c48020, 
+am_id_t arg_0x2b4d70274020, 
 # 80 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -6951,7 +5537,7 @@ void *
 
 /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__getPayload(
 # 48 "/home/wangqi/platforms2013/tinyos-main/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x2b7643c48020, 
+am_id_t arg_0x2b4d70274020, 
 # 132 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -6960,7 +5546,7 @@ uint8_t len);
 # 100 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Send.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x2b7643c4ae18, 
+uint8_t arg_0x2b4d70276e18, 
 # 96 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -6990,22 +5576,22 @@ static am_id_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMPacket__type(
 #line 143
 message_t * amsg);
 # 126 "/home/wangqi/platforms2013/tinyos-main/tos/system/AMQueueImplP.nc"
-enum /*AMQueueP.AMQueueImplP*/AMQueueImplP__0____nesc_unnamed4338 {
+enum /*AMQueueP.AMQueueImplP*/AMQueueImplP__0____nesc_unnamed4327 {
 #line 126
-  AMQueueImplP__0__CancelTask = 10U
+  AMQueueImplP__0__CancelTask = 8U
 };
 #line 126
 typedef int /*AMQueueP.AMQueueImplP*/AMQueueImplP__0____nesc_sillytask_CancelTask[/*AMQueueP.AMQueueImplP*/AMQueueImplP__0__CancelTask];
 #line 169
-enum /*AMQueueP.AMQueueImplP*/AMQueueImplP__0____nesc_unnamed4339 {
+enum /*AMQueueP.AMQueueImplP*/AMQueueImplP__0____nesc_unnamed4328 {
 #line 169
-  AMQueueImplP__0__errorTask = 11U
+  AMQueueImplP__0__errorTask = 9U
 };
 #line 169
 typedef int /*AMQueueP.AMQueueImplP*/AMQueueImplP__0____nesc_sillytask_errorTask[/*AMQueueP.AMQueueImplP*/AMQueueImplP__0__errorTask];
 #line 57
 #line 55
-typedef struct /*AMQueueP.AMQueueImplP*/AMQueueImplP__0____nesc_unnamed4340 {
+typedef struct /*AMQueueP.AMQueueImplP*/AMQueueImplP__0____nesc_unnamed4329 {
   message_t * msg;
 } /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__queue_entry_t;
 
@@ -7205,9 +5791,9 @@ static inline void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Al
 }
 
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
-inline static void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__fired(uint8_t arg_0x2b7642f63998){
+inline static void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__fired(uint8_t arg_0x2b4d6f5d0998){
 #line 78
-  switch (arg_0x2b7642f63998) {
+  switch (arg_0x2b4d6f5d0998) {
 #line 78
     case /*TimerMilliP.AlarmMilli32C.MuxAlarm62khz32C*/MuxAlarm62khz32C__0__CLIENT_ID:
 #line 78
@@ -7217,7 +5803,7 @@ inline static void /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Al
 #line 78
     default:
 #line 78
-      /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__default__fired(arg_0x2b7642f63998);
+      /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Alarm__default__fired(arg_0x2b4d6f5d0998);
 #line 78
       break;
 #line 78
@@ -7923,9 +6509,9 @@ static inline void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAl
 }
 
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
-inline static void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAlarm__fired(uint8_t arg_0x2b764358ddf0){
+inline static void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAlarm__fired(uint8_t arg_0x2b4d6fb67df0){
 #line 60
-  switch (arg_0x2b764358ddf0) {
+  switch (arg_0x2b4d6fb67df0) {
 #line 60
     case 0U:
 #line 60
@@ -7941,7 +6527,7 @@ inline static void /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAl
 #line 60
     default:
 #line 60
-      /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAlarm__default__fired(arg_0x2b764358ddf0);
+      /*RFA1RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP__0__RadioAlarm__default__fired(arg_0x2b4d6fb67df0);
 #line 60
       break;
 #line 60
@@ -8009,9 +6595,9 @@ static inline void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP_
 }
 
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
-inline static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__RadioAlarm__fired(uint8_t arg_0x2b764358ddf0){
+inline static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__RadioAlarm__fired(uint8_t arg_0x2b4d6fb67df0){
 #line 60
-  switch (arg_0x2b764358ddf0) {
+  switch (arg_0x2b4d6fb67df0) {
 #line 60
     case 0U:
 #line 60
@@ -8021,7 +6607,7 @@ inline static void /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP_
 #line 60
     default:
 #line 60
-      /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__RadioAlarm__default__fired(arg_0x2b764358ddf0);
+      /*RFA1RadioC.SoftwareAckRadioAlarmC.RadioAlarmP*/RadioAlarmP__1__RadioAlarm__default__fired(arg_0x2b4d6fb67df0);
 #line 60
       break;
 #line 60
@@ -8129,13 +6715,10 @@ static __inline void RFA1DriverLayerP__changeChannel(void )
 
   if (RFA1DriverLayerP__state != RFA1DriverLayerP__STATE_SLEEP) {
 
+
+
     * (volatile uint8_t *)0x148 = RFA1_CCA_MODE_VALUE | RFA1DriverLayerP__channel;
     }
-#line 275
-  * (volatile uint8_t *)0x148 = RFA1_CCA_MODE_VALUE | RFA1DriverLayerP__channel;
-
-
-
 
   if (RFA1DriverLayerP__state == RFA1DriverLayerP__STATE_RX_ON) {
     RFA1DriverLayerP__state = RFA1DriverLayerP__STATE_TRX_OFF_2_RX_ON;
@@ -8337,10 +6920,10 @@ static __inline void RFA1DriverLayerP__changeState(void )
 
 
 
-          * (volatile uint8_t *)0x14D = 3;
-          * (volatile uint8_t *)0x14D = 3;
 
 
+
+          * (volatile uint8_t *)0x14D = 3;
 
           * (volatile uint8_t *)(0x13 + 0x20) |= 1 << 1;
           * (volatile uint8_t *)(0x14 + 0x20) &= ~(1 << 1);
@@ -8365,11 +6948,9 @@ static __inline void RFA1DriverLayerP__changeState(void )
 
 
 
-      * (volatile uint8_t *)0x14D = 3;
-#line 372
-      * (volatile uint8_t *)0x14D = 3;
 
 
+      * (volatile uint8_t *)0x14D = 3;
 
       * (volatile uint8_t *)(0x13 + 0x20) |= 1 << 1;
       * (volatile uint8_t *)(0x14 + 0x20) &= ~(1 << 1);
@@ -10302,11 +8883,9 @@ static inline void RFA1DriverLayerP__serviceRadio(void )
         {
 
 
-          * (volatile uint8_t *)0x155 &= ~(1 << 7);
-#line 808
-          * (volatile uint8_t *)0x155 &= ~(1 << 7);
 
 
+          * (volatile uint8_t *)0x155 &= ~(1 << 7);
 
 
           RFA1DriverLayerP__cmd = RFA1DriverLayerP__CMD_NONE;
@@ -10813,217 +9392,6 @@ inline static void HplAtmRfa1TimerMacP__CompareC__fired(void ){
 #line 48
 }
 #line 48
-# 343 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/spi/Atm128SpiP.nc"
-static inline 
-#line 342
-void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiPacket__default__sendDone(
-uint8_t *_txbuffer, uint8_t *_rxbuffer, 
-uint16_t _length, error_t _success)
-#line 344
-{
-}
-
-# 82 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/SpiPacket.nc"
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiPacket__sendDone(uint8_t * txBuf, uint8_t * rxBuf, uint16_t len, error_t error){
-#line 82
-  /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiPacket__default__sendDone(txBuf, rxBuf, len, error);
-#line 82
-}
-#line 82
-# 123 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline uint8_t HplAtm128SpiP__SPI__read(void )
-#line 123
-{
-#line 123
-  return * (volatile uint8_t *)(0x2E + 0x20);
-}
-
-# 97 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-inline static uint8_t /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__read(void ){
-#line 97
-  unsigned char __nesc_result;
-#line 97
-
-#line 97
-  __nesc_result = HplAtm128SpiP__SPI__read();
-#line 97
-
-#line 97
-  return __nesc_result;
-#line 97
-}
-#line 97
-# 124 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline void HplAtm128SpiP__SPI__write(uint8_t d)
-#line 124
-{
-#line 124
-  * (volatile uint8_t *)(0x2E + 0x20) = d;
-}
-
-# 103 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__write(uint8_t data){
-#line 103
-  HplAtm128SpiP__SPI__write(data);
-#line 103
-}
-#line 103
-
-
-
-
-
-
-
-
-
-
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__enableInterrupt(bool enabled){
-#line 113
-  HplAtm128SpiP__SPI__enableInterrupt(enabled);
-#line 113
-}
-#line 113
-# 243 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/spi/Atm128SpiP.nc"
-static inline error_t /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__sendNextPart(void )
-#line 243
-{
-  uint16_t end;
-  uint16_t tmpPos;
-  uint16_t myLen __attribute((unused)) ;
-  uint8_t * tx;
-  uint8_t * rx;
-
-  /* atomic removed: atomic calls only */
-#line 250
-  {
-    myLen = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__len;
-    tx = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__txBuffer;
-    rx = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__rxBuffer;
-    tmpPos = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__pos;
-    end = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__pos + /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SPI_ATOMIC_SIZE;
-    end = end > /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__len ? /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__len : end;
-  }
-
-  for (; tmpPos < end - 1; tmpPos++) {
-      uint8_t val;
-
-#line 261
-      if (tx != (void *)0) {
-        val = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiByte__write(tx[tmpPos]);
-        }
-      else {
-#line 264
-        val = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiByte__write(0);
-        }
-      if (rx != (void *)0) {
-          rx[tmpPos] = val;
-        }
-    }
-
-
-
-  /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__enableInterrupt(TRUE);
-  /* atomic removed: atomic calls only */
-#line 274
-  {
-    if (tx != (void *)0) {
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__write(tx[tmpPos]);
-      }
-    else {
-#line 278
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__write(0);
-      }
-    /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__pos = tmpPos;
-  }
-
-
-  return SUCCESS;
-}
-
-#line 346
-static inline void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__dataReady(uint8_t data)
-#line 346
-{
-  bool again;
-
-  /* atomic removed: atomic calls only */
-#line 349
-  {
-    if (/*Atm128SpiC.SpiMaster*/Atm128SpiP__0__rxBuffer != (void *)0) {
-        /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__rxBuffer[/*Atm128SpiC.SpiMaster*/Atm128SpiP__0__pos] = data;
-      }
-
-    /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__pos++;
-  }
-  /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__enableInterrupt(FALSE);
-  /* atomic removed: atomic calls only */
-  {
-    again = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__pos < /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__len;
-  }
-
-  if (again) {
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__sendNextPart();
-    }
-  else {
-      uint8_t discard __attribute((unused)) ;
-      uint16_t myLen;
-      uint8_t * rx;
-      uint8_t * tx;
-
-      /* atomic removed: atomic calls only */
-#line 371
-      {
-        myLen = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__len;
-        rx = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__rxBuffer;
-        tx = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__txBuffer;
-        /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__rxBuffer = (void *)0;
-        /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__txBuffer = (void *)0;
-        /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__len = 0;
-        /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__pos = 0;
-      }
-      discard = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__read();
-
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiPacket__sendDone(tx, rx, myLen, SUCCESS);
-    }
-}
-
-# 109 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-inline static void HplAtm128SpiP__SPI__dataReady(uint8_t data){
-#line 109
-  /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__dataReady(data);
-#line 109
-}
-#line 109
-# 52 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/McuPowerState.nc"
-inline static void HplAtm128SpiP__Mcu__update(void ){
-#line 52
-  McuSleepC__McuPowerState__update();
-#line 52
-}
-#line 52
-# 132 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline bool HplAtm128SpiP__SPI__isInterruptPending(void )
-#line 132
-{
-  return (* (volatile uint8_t *)(0x2D + 0x20) & (1 << 7)) != 0;
-}
-
-# 136 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-inline static bool /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__isInterruptPending(void ){
-#line 136
-  unsigned char __nesc_result;
-#line 136
-
-#line 136
-  __nesc_result = HplAtm128SpiP__SPI__isInterruptPending();
-#line 136
-
-#line 136
-  return __nesc_result;
-#line 136
-}
-#line 136
 # 228 "/home/wangqi/platforms2013/tinyos-main/tos/system/SchedulerBasicP.nc"
 static inline void SchedulerBasicP__Scheduler__init(void )
 {
@@ -11053,27 +9421,6 @@ static inline  error_t ecombine(error_t r1, error_t r2)
 }
 
 # 50 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-static __inline void /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__set(uint8_t bit)
-#line 50
-{
-#line 50
-  * (volatile uint8_t * )52U |= 1 << bit;
-}
-
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-inline static void LedsP__Led2__set(void ){
-#line 40
-  /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__set(0);
-#line 40
-}
-#line 40
-inline static void LedsP__Led1__set(void ){
-#line 40
-  /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__set(5);
-#line 40
-}
-#line 40
-# 50 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
 static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(uint8_t bit)
 #line 50
 {
@@ -11082,33 +9429,24 @@ static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(uin
 }
 
 # 40 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
+inline static void LedsP__Led2__set(void ){
+#line 40
+  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(7);
+#line 40
+}
+#line 40
+inline static void LedsP__Led1__set(void ){
+#line 40
+  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(6);
+#line 40
+}
+#line 40
 inline static void LedsP__Led0__set(void ){
 #line 40
   /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(5);
 #line 40
 }
 #line 40
-# 56 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-static __inline void /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__makeOutput(uint8_t bit)
-#line 56
-{
-#line 56
-  * (volatile uint8_t * )51U |= 1 << bit;
-}
-
-# 46 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-inline static void LedsP__Led2__makeOutput(void ){
-#line 46
-  /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__makeOutput(0);
-#line 46
-}
-#line 46
-inline static void LedsP__Led1__makeOutput(void ){
-#line 46
-  /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__makeOutput(5);
-#line 46
-}
-#line 46
 # 56 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
 static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(uint8_t bit)
 #line 56
@@ -11118,6 +9456,18 @@ static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOut
 }
 
 # 46 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
+inline static void LedsP__Led2__makeOutput(void ){
+#line 46
+  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(7);
+#line 46
+}
+#line 46
+inline static void LedsP__Led1__makeOutput(void ){
+#line 46
+  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(6);
+#line 46
+}
+#line 46
 inline static void LedsP__Led0__makeOutput(void ){
 #line 46
   /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(5);
@@ -11157,80 +9507,23 @@ inline static error_t PlatformP__LedsInit__init(void ){
 #line 62
 }
 #line 62
-# 21 "/home/wangqi/platforms2013/tinyos-main/tos/chips/at45dbx/At45dbOffP.nc"
-static inline error_t At45dbOffP__At45dbOff__init(void )
-#line 21
+# 15 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa_cb/WatchDogP.nc"
+static inline error_t WatchDogP__WDInit__init(void )
+#line 15
 {
-#line 35
+   __asm volatile ("in __tmp_reg__, __SREG__""\n\t""cli""\n\t""sts %0, %1""\n\t""sts %0, __zero_reg__""\n\t""out __SREG__,__tmp_reg__""\n\t" :  : "M"((uint16_t )& * (volatile uint8_t *)0x60), "r"((uint8_t )((1 << 4) | (1 << 3))) : "r0");
+   __asm volatile ("in __tmp_reg__,__SREG__""\n\t""cli""\n\t""wdr""\n\t""sts %0,%1""\n\t""out __SREG__,__tmp_reg__""\n\t""sts %0,%2""\n\t" :  : "M"((uint16_t )& * (volatile uint8_t *)0x60), "r"((1 << 4) | (1 << 3)), "r"((uint8_t )(((9 & 0x08 ? 1 << 5 : 0x00) | (1 << 3)) | (9 & 0x07))) : "r0");
   return SUCCESS;
 }
 
 # 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
-inline static error_t PlatformP__At45dbInit__init(void ){
+inline static error_t PlatformP__WDInit__init(void ){
 #line 62
   unsigned char __nesc_result;
 #line 62
 
 #line 62
-  __nesc_result = At45dbOffP__At45dbOff__init();
-#line 62
-
-#line 62
-  return __nesc_result;
-#line 62
-}
-#line 62
-# 52 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-static __inline void /*AtmegaGeneralIOC.PortF*/AtmegaGeneralIOP__5__Pin__toggle(uint8_t bit)
-#line 52
-{
-#line 52
-  * (volatile uint8_t * )47U = 1 << bit;
-}
-
-# 42 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-inline static void Max706P__WDI__toggle(void ){
-#line 42
-  /*AtmegaGeneralIOC.PortF*/AtmegaGeneralIOP__5__Pin__toggle(0);
-#line 42
-}
-#line 42
-# 56 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-static __inline void /*AtmegaGeneralIOC.PortF*/AtmegaGeneralIOP__5__Pin__makeOutput(uint8_t bit)
-#line 56
-{
-#line 56
-  * (volatile uint8_t * )48U |= 1 << bit;
-}
-
-# 46 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-inline static void Max706P__WDI__makeOutput(void ){
-#line 46
-  /*AtmegaGeneralIOC.PortF*/AtmegaGeneralIOP__5__Pin__makeOutput(0);
-#line 46
-}
-#line 46
-# 18 "/home/wangqi/platforms2013/tinyos-main/tos/chips/max706/Max706P.nc"
-static inline error_t Max706P__Init__init(void )
-#line 18
-{
-
-  Max706P__WDI__makeOutput();
-  Max706P__WDI__toggle();
-
-
-
-  return SUCCESS;
-}
-
-# 62 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Init.nc"
-inline static error_t PlatformP__Max706Init__init(void ){
-#line 62
-  unsigned char __nesc_result;
-#line 62
-
-#line 62
-  __nesc_result = Max706P__Init__init();
+  __nesc_result = WatchDogP__WDInit__init();
 #line 62
 
 #line 62
@@ -11572,16 +9865,13 @@ inline static error_t PlatformP__McuInit__init(void ){
 #line 62
 }
 #line 62
-# 54 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/PlatformP.nc"
+# 51 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa_cb/PlatformP.nc"
 static inline error_t PlatformP__Init__init(void )
 {
   error_t ok;
 
   ok = PlatformP__McuInit__init();
-
-  ok = ecombine(ok, PlatformP__Max706Init__init());
-
-  ok = ecombine(ok, PlatformP__At45dbInit__init());
+  ok = ecombine(ok, PlatformP__WDInit__init());
   ok = ecombine(ok, PlatformP__LedsInit__init());
 
   return ok;
@@ -11661,9 +9951,9 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__send
 }
 
 # 100 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Send.nc"
-inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(uint8_t arg_0x2b7643c4ae18, message_t * msg, error_t error){
+inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(uint8_t arg_0x2b4d70276e18, message_t * msg, error_t error){
 #line 100
-  switch (arg_0x2b7643c4ae18) {
+  switch (arg_0x2b4d70276e18) {
 #line 100
     case 0U:
 #line 100
@@ -11673,7 +9963,7 @@ inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(uint
 #line 100
     default:
 #line 100
-      /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__sendDone(arg_0x2b7643c4ae18, msg, error);
+      /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__sendDone(arg_0x2b4d70276e18, msg, error);
 #line 100
       break;
 #line 100
@@ -11734,13 +10024,13 @@ inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__errorTask__postT
 }
 #line 67
 # 80 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
-inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__send(am_id_t arg_0x2b7643c48020, am_addr_t addr, message_t * msg, uint8_t len){
+inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__send(am_id_t arg_0x2b4d70274020, am_addr_t addr, message_t * msg, uint8_t len){
 #line 80
   unsigned char __nesc_result;
 #line 80
 
 #line 80
-  __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__AMSend__send(arg_0x2b7643c48020, addr, msg, len);
+  __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__AMSend__send(arg_0x2b4d70274020, addr, msg, len);
 #line 80
 
 #line 80
@@ -12318,14 +10608,14 @@ static inline void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveM
 }
 
 # 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/SendNotifier.nc"
-inline static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SendNotifier__aboutToSend(am_id_t arg_0x2b76435ff2f0, am_addr_t dest, message_t * msg){
+inline static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SendNotifier__aboutToSend(am_id_t arg_0x2b4d6fbb52f0, am_addr_t dest, message_t * msg){
 #line 59
-    /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SendNotifier__default__aboutToSend(arg_0x2b76435ff2f0, dest, msg);
+    /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SendNotifier__default__aboutToSend(arg_0x2b4d6fbb52f0, dest, msg);
 #line 59
 }
 #line 59
 # 64 "/home/wangqi/platforms2013/tinyos-main/tos/system/FcfsResourceQueueC.nc"
-static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__isEnqueued(resource_client_id_t id)
+static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__isEnqueued(resource_client_id_t id)
 #line 64
 {
   /* atomic removed: atomic calls only */
@@ -12333,7 +10623,7 @@ static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__Fcfs
   {
     unsigned char __nesc_temp = 
 #line 65
-    /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__resQ[id] != /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY || /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qTail == id;
+    /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__resQ[id] != /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY || /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qTail == id;
 
 #line 65
     return __nesc_temp;
@@ -12341,22 +10631,22 @@ static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__Fcfs
 }
 
 #line 82
-static inline error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__enqueue(resource_client_id_t id)
+static inline error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__enqueue(resource_client_id_t id)
 #line 82
 {
   /* atomic removed: atomic calls only */
 #line 83
   {
-    if (!/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__isEnqueued(id)) {
-        if (/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qTail >= 1U) {
-          /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qHead = id;
+    if (!/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__isEnqueued(id)) {
+        if (/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qTail >= 1U) {
+          /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qHead = id;
           }
         else {
 #line 88
-          /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__resQ[/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qTail] = id;
+          /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__resQ[/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qTail] = id;
           }
 #line 89
-        /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qTail = id;
+        /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qTail = id;
         {
           unsigned char __nesc_temp = 
 #line 90
@@ -12379,13 +10669,13 @@ static inline error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__F
 }
 
 # 79 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceQueue.nc"
-inline static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue__enqueue(resource_client_id_t id){
+inline static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Queue__enqueue(resource_client_id_t id){
 #line 79
   unsigned char __nesc_result;
 #line 79
 
 #line 79
-  __nesc_result = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__enqueue(id);
+  __nesc_result = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__enqueue(id);
 #line 79
 
 #line 79
@@ -12394,13 +10684,13 @@ inline static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Que
 }
 #line 79
 # 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-inline static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask__postTask(void ){
+inline static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask__postTask(void ){
 #line 67
   unsigned char __nesc_result;
 #line 67
 
 #line 67
-  __nesc_result = SchedulerBasicP__TaskBasic__postTask(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask);
+  __nesc_result = SchedulerBasicP__TaskBasic__postTask(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask);
 #line 67
 
 #line 67
@@ -12409,30 +10699,30 @@ inline static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__gra
 }
 #line 67
 # 160 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__default__requested(uint8_t id)
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__default__requested(uint8_t id)
 #line 160
 {
 }
 
 # 53 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceRequested.nc"
-inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__requested(uint8_t arg_0x2b764332a020){
+inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__requested(uint8_t arg_0x2b4d6fca6020){
 #line 53
-    /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__default__requested(arg_0x2b764332a020);
+    /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__default__requested(arg_0x2b4d6fca6020);
 #line 53
 }
 #line 53
 # 70 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__request(uint8_t id)
+static inline error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__request(uint8_t id)
 #line 70
 {
-  /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__requested(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId);
+  /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__requested(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId);
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
 #line 72
     {
-      if (/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__state == /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__RES_IDLE) {
-          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__RES_GRANTING;
-          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId = id;
-          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask__postTask();
+      if (/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__state == /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__RES_IDLE) {
+          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__RES_GRANTING;
+          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId = id;
+          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask__postTask();
           {
             unsigned char __nesc_temp = 
 #line 77
@@ -12450,7 +10740,7 @@ static inline error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Res
       {
         unsigned char __nesc_temp = 
 #line 79
-        /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue__enqueue(id);
+        /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Queue__enqueue(id);
 
         {
 #line 79
@@ -12471,7 +10761,7 @@ inline static error_t /*RFA1RadioC.AutoResourceAcquireLayerC*/AutoResourceAcquir
 #line 88
 
 #line 88
-  __nesc_result = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__request(0U);
+  __nesc_result = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__request(0U);
 #line 88
 
 #line 88
@@ -12486,7 +10776,7 @@ inline static error_t /*RFA1RadioC.AutoResourceAcquireLayerC*/AutoResourceAcquir
 #line 120
 
 #line 120
-  __nesc_result = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__release(0U);
+  __nesc_result = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__release(0U);
 #line 120
 
 #line 120
@@ -12510,43 +10800,43 @@ inline static error_t /*RFA1RadioC.AutoResourceAcquireLayerC*/AutoResourceAcquir
 }
 #line 46
 # 164 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__default__configure(uint8_t id)
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__default__configure(uint8_t id)
 #line 164
 {
 }
 
 # 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__configure(uint8_t arg_0x2b7643329538){
+inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__configure(uint8_t arg_0x2b4d6fca5538){
 #line 59
-    /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__default__configure(arg_0x2b7643329538);
+    /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__default__configure(arg_0x2b4d6fca5538);
 #line 59
 }
 #line 59
 # 162 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__default__immediateRequested(uint8_t id)
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__default__immediateRequested(uint8_t id)
 #line 162
 {
 }
 
 # 61 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceRequested.nc"
-inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__immediateRequested(uint8_t arg_0x2b764332a020){
+inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__immediateRequested(uint8_t arg_0x2b4d6fca6020){
 #line 61
-    /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__default__immediateRequested(arg_0x2b764332a020);
+    /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__default__immediateRequested(arg_0x2b4d6fca6020);
 #line 61
 }
 #line 61
 # 83 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__immediateRequest(uint8_t id)
+static inline error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__immediateRequest(uint8_t id)
 #line 83
 {
-  /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceRequested__immediateRequested(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId);
+  /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceRequested__immediateRequested(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId);
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
 #line 85
     {
-      if (/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__state == /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__RES_IDLE) {
-          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__RES_BUSY;
-          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId = id;
-          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__configure(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId);
+      if (/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__state == /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__RES_IDLE) {
+          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__RES_BUSY;
+          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId = id;
+          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__configure(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId);
           {
             unsigned char __nesc_temp = 
 #line 90
@@ -12585,7 +10875,7 @@ inline static error_t /*RFA1RadioC.AutoResourceAcquireLayerC*/AutoResourceAcquir
 #line 97
 
 #line 97
-  __nesc_result = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__immediateRequest(0U);
+  __nesc_result = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__immediateRequest(0U);
 #line 97
 
 #line 97
@@ -12752,7 +11042,7 @@ inline static error_t /*RFA1RadioC.TinyosNetworkLayerC*/TinyosNetworkLayerC__0__
 }
 #line 46
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/system/FcfsResourceQueueC.nc"
-static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__isEmpty(void )
+static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__isEmpty(void )
 #line 60
 {
   /* atomic removed: atomic calls only */
@@ -12760,7 +11050,7 @@ static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__Fcfs
   {
     unsigned char __nesc_temp = 
 #line 61
-    /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qHead == /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY;
+    /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qHead == /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY;
 
 #line 61
     return __nesc_temp;
@@ -12768,13 +11058,13 @@ static inline bool /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__Fcfs
 }
 
 # 53 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceQueue.nc"
-inline static bool /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue__isEmpty(void ){
+inline static bool /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Queue__isEmpty(void ){
 #line 53
   unsigned char __nesc_result;
 #line 53
 
 #line 53
-  __nesc_result = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__isEmpty();
+  __nesc_result = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__isEmpty();
 #line 53
 
 #line 53
@@ -12783,22 +11073,22 @@ inline static bool /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue_
 }
 #line 53
 # 68 "/home/wangqi/platforms2013/tinyos-main/tos/system/FcfsResourceQueueC.nc"
-static inline resource_client_id_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__dequeue(void )
+static inline resource_client_id_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__dequeue(void )
 #line 68
 {
   /* atomic removed: atomic calls only */
 #line 69
   {
-    if (/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qHead != /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY) {
-        uint8_t id = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qHead;
+    if (/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qHead != /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY) {
+        uint8_t id = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qHead;
 
 #line 72
-        /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qHead = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__resQ[/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qHead];
-        if (/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qHead == /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY) {
-          /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__qTail = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY;
+        /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qHead = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__resQ[/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qHead];
+        if (/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qHead == /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY) {
+          /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__qTail = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY;
           }
 #line 75
-        /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__resQ[id] = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY;
+        /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__resQ[id] = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY;
         {
           unsigned char __nesc_temp = 
 #line 76
@@ -12812,7 +11102,7 @@ static inline resource_client_id_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourc
     {
       unsigned char __nesc_temp = 
 #line 78
-      /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY;
+      /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY;
 
 #line 78
       return __nesc_temp;
@@ -12821,13 +11111,13 @@ static inline resource_client_id_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourc
 }
 
 # 70 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceQueue.nc"
-inline static resource_client_id_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue__dequeue(void ){
+inline static resource_client_id_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Queue__dequeue(void ){
 #line 70
   unsigned char __nesc_result;
 #line 70
 
 #line 70
-  __nesc_result = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__FcfsQueue__dequeue();
+  __nesc_result = /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__FcfsQueue__dequeue();
 #line 70
 
 #line 70
@@ -12836,15 +11126,15 @@ inline static resource_client_id_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArb
 }
 #line 70
 # 166 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__default__unconfigure(uint8_t id)
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__default__unconfigure(uint8_t id)
 #line 166
 {
 }
 
 # 65 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__unconfigure(uint8_t arg_0x2b7643329538){
+inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__unconfigure(uint8_t arg_0x2b4d6fca5538){
 #line 65
-    /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__default__unconfigure(arg_0x2b7643329538);
+    /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__default__unconfigure(arg_0x2b4d6fca5538);
 #line 65
 }
 #line 65
@@ -12918,17 +11208,17 @@ static inline void LedsP__Leds__led2Off(void )
 }
 
 # 51 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-static __inline void /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__clr(uint8_t bit)
+static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__clr(uint8_t bit)
 #line 51
 {
 #line 51
-  * (volatile uint8_t * )52U &= ~(1 << bit);
+  * (volatile uint8_t * )37U &= ~(1 << bit);
 }
 
 # 41 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
 inline static void LedsP__Led2__clr(void ){
 #line 41
-  /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__clr(0);
+  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__clr(7);
 #line 41
 }
 #line 41
@@ -12955,7 +11245,7 @@ static inline void LedsP__Leds__led1Off(void )
 # 41 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
 inline static void LedsP__Led1__clr(void ){
 #line 41
-  /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__clr(5);
+  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__clr(6);
 #line 41
 }
 #line 41
@@ -12977,14 +11267,6 @@ static inline void LedsP__Leds__led0Off(void )
   ;
 #line 81
   ;
-}
-
-# 51 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__clr(uint8_t bit)
-#line 51
-{
-#line 51
-  * (volatile uint8_t * )37U &= ~(1 << bit);
 }
 
 # 41 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
@@ -13281,9 +11563,9 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(am
 }
 
 # 110 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
-inline static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__AMSend__sendDone(am_id_t arg_0x2b7643602020, message_t * msg, error_t error){
+inline static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__AMSend__sendDone(am_id_t arg_0x2b4d6fbb8020, message_t * msg, error_t error){
 #line 110
-  /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(arg_0x2b7643602020, msg, error);
+  /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(arg_0x2b4d6fbb8020, msg, error);
 #line 110
 }
 #line 110
@@ -13558,13 +11840,13 @@ static inline message_t */*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/A
 }
 
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SnoopDefault__receive(am_id_t arg_0x2b76435febb0, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SnoopDefault__receive(am_id_t arg_0x2b4d6fbb3bb0, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SnoopDefault__default__receive(arg_0x2b76435febb0, msg, payload, len);
+    __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SnoopDefault__default__receive(arg_0x2b4d6fbb3bb0, msg, payload, len);
 #line 78
 
 #line 78
@@ -13581,13 +11863,13 @@ static inline message_t */*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/A
 }
 
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Snoop__receive(am_id_t arg_0x2b7643601ca0, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Snoop__receive(am_id_t arg_0x2b4d6fbb7ca0, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Snoop__default__receive(arg_0x2b7643601ca0, msg, payload, len);
+    __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Snoop__default__receive(arg_0x2b4d6fbb7ca0, msg, payload, len);
 #line 78
 
 #line 78
@@ -13602,13 +11884,13 @@ static inline message_t */*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/A
 }
 
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__ReceiveDefault__receive(am_id_t arg_0x2b76435fe020, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__ReceiveDefault__receive(am_id_t arg_0x2b4d6fbb3020, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__ReceiveDefault__default__receive(arg_0x2b76435fe020, msg, payload, len);
+    __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__ReceiveDefault__default__receive(arg_0x2b4d6fbb3020, msg, payload, len);
 #line 78
 
 #line 78
@@ -13717,13 +11999,13 @@ static inline message_t */*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/A
 }
 
 # 78 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Receive__receive(am_id_t arg_0x2b7643601158, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Receive__receive(am_id_t arg_0x2b4d6fbb7158, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-  switch (arg_0x2b7643601158) {
+  switch (arg_0x2b4d6fbb7158) {
 #line 78
     case 6:
 #line 78
@@ -13733,7 +12015,7 @@ inline static message_t * /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/
 #line 78
     default:
 #line 78
-      __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Receive__default__receive(arg_0x2b7643601158, msg, payload, len);
+      __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Receive__default__receive(arg_0x2b4d6fbb7158, msg, payload, len);
 #line 78
       break;
 #line 78
@@ -13786,9 +12068,9 @@ static inline void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveM
 }
 
 # 16 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Sniff.nc"
-inline static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Sniff__catch(am_id_t arg_0x2b7643600788, message_t * msg, void * payload, uint8_t len){
+inline static void /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Sniff__catch(am_id_t arg_0x2b4d6fbb6788, message_t * msg, void * payload, uint8_t len){
 #line 16
-    /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Sniff__default__catch(arg_0x2b7643600788, msg, payload, len);
+    /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__Sniff__default__catch(arg_0x2b4d6fbb6788, msg, payload, len);
 #line 16
 }
 #line 16
@@ -13910,15 +12192,15 @@ static inline void /*RFA1RadioC.AutoResourceAcquireLayerC*/AutoResourceAcquireLa
 }
 
 # 158 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__default__granted(uint8_t id)
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__default__granted(uint8_t id)
 #line 158
 {
 }
 
 # 102 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__granted(uint8_t arg_0x2b764332de30){
+inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__granted(uint8_t arg_0x2b4d6fca9e30){
 #line 102
-  switch (arg_0x2b764332de30) {
+  switch (arg_0x2b4d6fca9e30) {
 #line 102
     case 0U:
 #line 102
@@ -13928,7 +12210,7 @@ inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resour
 #line 102
     default:
 #line 102
-      /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__default__granted(arg_0x2b764332de30);
+      /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__default__granted(arg_0x2b4d6fca9e30);
 #line 102
       break;
 #line 102
@@ -13937,296 +12219,18 @@ inline static void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resour
 }
 #line 102
 # 149 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask__runTask(void )
+static inline void /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask__runTask(void )
 #line 149
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
 #line 150
     {
-      /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__RES_BUSY;
-      /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__configure(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId);
+      /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__RES_BUSY;
+      /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__configure(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId);
     }
 #line 153
     __nesc_atomic_end(__nesc_atomic); }
-  /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__granted(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId);
-}
-
-# 19 "/home/wangqi/platforms2013/tinyos-main/tos/chips/at45dbx/At45dbOffP.nc"
-static inline void At45dbOffP__Resource__granted(void )
-#line 19
-{
-}
-
-# 158 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__Resource__default__granted(uint8_t id)
-#line 158
-{
-}
-
-# 102 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Resource.nc"
-inline static void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__Resource__granted(uint8_t arg_0x2b764332de30){
-#line 102
-  switch (arg_0x2b764332de30) {
-#line 102
-    case 0U:
-#line 102
-      At45dbOffP__Resource__granted();
-#line 102
-      break;
-#line 102
-    default:
-#line 102
-      /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__Resource__default__granted(arg_0x2b764332de30);
-#line 102
-      break;
-#line 102
-    }
-#line 102
-}
-#line 102
-# 52 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/McuPowerState.nc"
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__McuPowerState__update(void ){
-#line 52
-  McuSleepC__McuPowerState__update();
-#line 52
-}
-#line 52
-# 225 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline void HplAtm128SpiP__SPI__setClock(uint8_t v)
-#line 225
-{
-  v &= (1 << 1) | (1 << 0);
-  * (volatile uint8_t *)(0x2C + 0x20) = (* (volatile uint8_t *)(0x2C + 0x20) & ~((1 << 1) | (1 << 0))) | v;
-}
-
-# 131 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setClock(uint8_t speed){
-#line 131
-  HplAtm128SpiP__SPI__setClock(speed);
-#line 131
-}
-#line 131
-# 238 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline void HplAtm128SpiP__SPI__setMasterDoubleSpeed(bool on)
-#line 238
-{
-  if (on) {
-      * (volatile uint8_t *)(0x2D + 0x20) |= 1 << 0;
-    }
-  else {
-      * (volatile uint8_t *)(0x2D + 0x20) &= ~(1 << 0);
-    }
-}
-
-# 141 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setMasterDoubleSpeed(bool on){
-#line 141
-  HplAtm128SpiP__SPI__setMasterDoubleSpeed(on);
-#line 141
-}
-#line 141
-#line 116
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__enableSpi(bool busOn){
-#line 116
-  HplAtm128SpiP__SPI__enableSpi(busOn);
-#line 116
-}
-#line 116
-# 208 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline void HplAtm128SpiP__SPI__setClockPhase(bool sampleOnTrailing)
-#line 208
-{
-  if (sampleOnTrailing) {
-      * (volatile uint8_t *)(0x2C + 0x20) |= 1 << 2;
-    }
-  else {
-      * (volatile uint8_t *)(0x2C + 0x20) &= ~(1 << 2);
-    }
-}
-
-# 128 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setClockPhase(bool sampleOnTrailing){
-#line 128
-  HplAtm128SpiP__SPI__setClockPhase(sampleOnTrailing);
-#line 128
-}
-#line 128
-# 194 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline void HplAtm128SpiP__SPI__setClockPolarity(bool highWhenIdle)
-#line 194
-{
-  if (highWhenIdle) {
-      * (volatile uint8_t *)(0x2C + 0x20) |= 1 << 3;
-    }
-  else {
-      * (volatile uint8_t *)(0x2C + 0x20) &= ~(1 << 3);
-    }
-}
-
-# 125 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setClockPolarity(bool highWhenIdle){
-#line 125
-  HplAtm128SpiP__SPI__setClockPolarity(highWhenIdle);
-#line 125
-}
-#line 125
-# 181 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline void HplAtm128SpiP__SPI__setMasterBit(bool isMaster)
-#line 181
-{
-  if (isMaster) {
-      * (volatile uint8_t *)(0x2C + 0x20) |= 1 << 4;
-    }
-  else {
-      * (volatile uint8_t *)(0x2C + 0x20) &= ~(1 << 4);
-    }
-}
-
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-inline static void HplAtm128SpiP__OSS__set(void ){
-#line 40
-  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__set(0);
-#line 40
-}
-#line 40
-# 54 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/pins/AtmegaGeneralIOP.nc"
-static __inline void /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeInput(uint8_t bit)
-#line 54
-{
-#line 54
-  * (volatile uint8_t * )36U &= ~(1 << bit);
-}
-
-# 44 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/GeneralIO.nc"
-inline static void HplAtm128SpiP__OSS__makeInput(void ){
-#line 44
-  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeInput(0);
-#line 44
-}
-#line 44
-
-
-inline static void HplAtm128SpiP__SS__makeOutput(void ){
-#line 46
-  /*AtmegaGeneralIOC.PortG*/AtmegaGeneralIOP__6__Pin__makeOutput(2);
-#line 46
-}
-#line 46
-inline static void HplAtm128SpiP__SCK__makeOutput(void ){
-#line 46
-  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(1);
-#line 46
-}
-#line 46
-#line 44
-inline static void HplAtm128SpiP__MISO__makeInput(void ){
-#line 44
-  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeInput(3);
-#line 44
-}
-#line 44
-
-
-inline static void HplAtm128SpiP__MOSI__makeOutput(void ){
-#line 46
-  /*AtmegaGeneralIOC.PortB*/AtmegaGeneralIOP__1__Pin__makeOutput(2);
-#line 46
-}
-#line 46
-# 100 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline void HplAtm128SpiP__SPI__initMaster(void )
-#line 100
-{
-  HplAtm128SpiP__MOSI__makeOutput();
-  HplAtm128SpiP__MISO__makeInput();
-  HplAtm128SpiP__SCK__makeOutput();
-  HplAtm128SpiP__SS__makeOutput();
-
-  HplAtm128SpiP__OSS__makeInput();
-  HplAtm128SpiP__OSS__set();
-
-  HplAtm128SpiP__SPI__setMasterBit(TRUE);
-}
-
-# 83 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128/spi/Atm128Spi.nc"
-inline static void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__initMaster(void ){
-#line 83
-  HplAtm128SpiP__SPI__initMaster();
-#line 83
-}
-#line 83
-# 123 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/spi/Atm128SpiP.nc"
-static inline void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__startSpi(void )
-#line 123
-{
-  /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__enableSpi(FALSE);
-  /* atomic removed: atomic calls only */
-#line 125
-  {
-    /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__initMaster();
-    /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__enableInterrupt(FALSE);
-    /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setClockPolarity(FALSE);
-    /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setClockPhase(FALSE);
-    /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__enableSpi(TRUE);
-#line 152
-    /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setMasterDoubleSpeed(TRUE);
-    /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__setClock(0);
-  }
-
-  /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__McuPowerState__update();
-}
-
-#line 386
-static inline void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__ResourceConfigure__configure(uint8_t id)
-#line 386
-{
-  /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__startSpi();
-}
-
-# 59 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-inline static void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__ResourceConfigure__configure(uint8_t arg_0x2b7643329538){
-#line 59
-  /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__ResourceConfigure__configure(arg_0x2b7643329538);
-#line 59
-}
-#line 59
-# 149 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static inline void /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__grantedTask__runTask(void )
-#line 149
-{
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 150
-    {
-      /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__state = /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__RES_BUSY;
-      /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__ResourceConfigure__configure(/*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__resId);
-    }
-#line 153
-    __nesc_atomic_end(__nesc_atomic); }
-  /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__Resource__granted(/*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__resId);
-}
-
-# 288 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/spi/Atm128SpiP.nc"
-static inline void /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__zeroTask__runTask(void )
-#line 288
-{
-  uint16_t myLen;
-  uint8_t * rx;
-  uint8_t * tx;
-
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 293
-    {
-      myLen = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__len;
-      rx = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__rxBuffer;
-      tx = /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__txBuffer;
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__rxBuffer = (void *)0;
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__txBuffer = (void *)0;
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__len = 0;
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__pos = 0;
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiPacket__sendDone(tx, rx, myLen, SUCCESS);
-    }
-#line 302
-    __nesc_atomic_end(__nesc_atomic); }
+  /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__granted(/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId);
 }
 
 # 103 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Alarm.nc"
@@ -14347,13 +12351,13 @@ static inline void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__updateFr
 }
 
 # 67 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-inline static error_t Max706P__wd_task__postTask(void ){
+inline static error_t WatchDogP__wd_task__postTask(void ){
 #line 67
   unsigned char __nesc_result;
 #line 67
 
 #line 67
-  __nesc_result = SchedulerBasicP__TaskBasic__postTask(Max706P__wd_task);
+  __nesc_result = SchedulerBasicP__TaskBasic__postTask(WatchDogP__wd_task);
 #line 67
 
 #line 67
@@ -14361,12 +12365,11 @@ inline static error_t Max706P__wd_task__postTask(void ){
 #line 67
 }
 #line 67
-# 46 "/home/wangqi/platforms2013/tinyos-main/tos/chips/max706/Max706P.nc"
-static inline void Max706P__TimerWD__fired(void )
-#line 46
+# 29 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa_cb/WatchDogP.nc"
+static inline void WatchDogP__TimerWD__fired(void )
+#line 29
 {
-
-  Max706P__wd_task__postTask();
+  WatchDogP__wd_task__postTask();
 }
 
 # 315 "/usr/lib/x86_64-linux-gnu/ncc/nesc_nx.h"
@@ -14579,13 +12582,13 @@ static __inline void */*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/Acti
 }
 
 # 135 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/AMSend.nc"
-inline static void * /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__getPayload(am_id_t arg_0x2b7643c48020, message_t * msg, uint8_t len){
+inline static void * /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__getPayload(am_id_t arg_0x2b4d70274020, message_t * msg, uint8_t len){
 #line 135
   void *__nesc_result;
 #line 135
 
 #line 135
-  __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__AMSend__getPayload(arg_0x2b7643c48020, msg, len);
+  __nesc_result = /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__AMSend__getPayload(arg_0x2b4d70274020, msg, len);
 #line 135
 
 #line 135
@@ -14676,13 +12679,13 @@ static inline void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__d
 }
 
 # 83 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
-inline static void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__fired(uint8_t arg_0x2b76431ae108){
+inline static void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__fired(uint8_t arg_0x2b4d6f832690){
 #line 83
-  switch (arg_0x2b76431ae108) {
+  switch (arg_0x2b4d6f832690) {
 #line 83
     case 0U:
 #line 83
-      Max706P__TimerWD__fired();
+      WatchDogP__TimerWD__fired();
 #line 83
       break;
 #line 83
@@ -14694,7 +12697,7 @@ inline static void /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__f
 #line 83
     default:
 #line 83
-      /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__default__fired(arg_0x2b76431ae108);
+      /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__default__fired(arg_0x2b4d6f832690);
 #line 83
       break;
 #line 83
@@ -14761,13 +12764,11 @@ static inline void /*TimerMilliP.AlarmToTimerC*/AlarmToTimerC__0__fired__runTask
   /*TimerMilliP.AlarmToTimerC*/AlarmToTimerC__0__Timer__fired();
 }
 
-# 40 "/home/wangqi/platforms2013/tinyos-main/tos/chips/max706/Max706P.nc"
-static inline void Max706P__wd_task__runTask(void )
-#line 40
+# 25 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa_cb/WatchDogP.nc"
+static inline void WatchDogP__wd_task__runTask(void )
+#line 25
 {
-
-  Max706P__WDI__toggle();
-}
+   __asm volatile ("wdr");}
 
 # 82 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
 static inline error_t /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Init__init(void )
@@ -14778,18 +12779,10 @@ static inline error_t /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0_
 }
 
 # 55 "/home/wangqi/platforms2013/tinyos-main/tos/system/FcfsResourceQueueC.nc"
-static inline error_t /*Atm128SpiC.Arbiter.Queue*/FcfsResourceQueueC__0__Init__init(void )
+static inline error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__Init__init(void )
 #line 55
 {
-  memset(/*Atm128SpiC.Arbiter.Queue*/FcfsResourceQueueC__0__resQ, /*Atm128SpiC.Arbiter.Queue*/FcfsResourceQueueC__0__NO_ENTRY, sizeof /*Atm128SpiC.Arbiter.Queue*/FcfsResourceQueueC__0__resQ);
-  return SUCCESS;
-}
-
-#line 55
-static inline error_t /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__Init__init(void )
-#line 55
-{
-  memset(/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__resQ, /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__NO_ENTRY, sizeof /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__resQ);
+  memset(/*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__resQ, /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__NO_ENTRY, sizeof /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__resQ);
   return SUCCESS;
 }
 
@@ -14866,10 +12859,8 @@ static inline error_t RFA1DriverLayerP__SoftwareInit__init(void )
   * (volatile uint8_t *)0x14D = 3;
   * (volatile uint8_t *)(0x13 + 0x20) |= 1 << 1;
   * (volatile uint8_t *)(0x14 + 0x20) &= ~(1 << 1);
-#line 220
-  * (volatile uint8_t *)0x145 = (RFA1_PA_BUF_LT | RFA1_PA_LT) | ((0 & RFA1_TX_PWR_MASK) << 0);
-
-
+#line 222
+  * (volatile uint8_t *)0x145 = (0 & RFA1_TX_PWR_MASK) << 0;
 
 
 
@@ -14907,9 +12898,7 @@ inline static error_t RealMainP__SoftwareInit__init(void ){
 #line 62
   __nesc_result = ecombine(__nesc_result, /*RFA1RadioC.UniqueLayerC.UniqueLayerP*/UniqueLayerP__0__Init__init());
 #line 62
-  __nesc_result = ecombine(__nesc_result, /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__1__Init__init());
-#line 62
-  __nesc_result = ecombine(__nesc_result, /*Atm128SpiC.Arbiter.Queue*/FcfsResourceQueueC__0__Init__init());
+  __nesc_result = ecombine(__nesc_result, /*RFA1RadioC.SendResourceC.Queue*/FcfsResourceQueueC__0__Init__init());
 #line 62
   __nesc_result = ecombine(__nesc_result, /*MuxAlarm62khz32C_.VirtualizeAlarmC*/VirtualizeAlarmC__0__Init__init());
 #line 62
@@ -14926,24 +12915,23 @@ static inline void CountToRadioC__Boot__booted(void )
 }
 
 # 64 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/Timer.nc"
-inline static void Max706P__TimerWD__startPeriodic(uint32_t dt){
+inline static void WatchDogP__TimerWD__startPeriodic(uint32_t dt){
 #line 64
   /*TimerMilliP.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__startPeriodic(0U, dt);
 #line 64
 }
 #line 64
-# 34 "/home/wangqi/platforms2013/tinyos-main/tos/chips/max706/Max706P.nc"
-static inline void Max706P__Boot__booted(void )
-#line 34
+# 21 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa_cb/WatchDogP.nc"
+static inline void WatchDogP__Boot__booted(void )
+#line 21
 {
-
-  Max706P__TimerWD__startPeriodic(382);
+  WatchDogP__TimerWD__startPeriodic(4000);
 }
 
 # 60 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/Boot.nc"
 inline static void RealMainP__Boot__booted(void ){
 #line 60
-  Max706P__Boot__booted();
+  WatchDogP__Boot__booted();
 #line 60
   CountToRadioC__Boot__booted();
 #line 60
@@ -14970,18 +12958,6 @@ static inline mcu_power_t HplAtmRfa1TimerMacP__McuPowerOverride__lowestState(voi
     }
 }
 
-# 247 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static inline mcu_power_t HplAtm128SpiP__McuPowerOverride__lowestState(void )
-#line 247
-{
-  if (* (volatile uint8_t *)(uint16_t )& * (volatile uint8_t *)(0x2C + 0x20) & (1 << 6)) {
-      return ATM128_POWER_IDLE;
-    }
-  else {
-    return ATM128_POWER_DOWN;
-    }
-}
-
 # 921 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/radiox/RFA1DriverLayerP.nc"
 static inline mcu_power_t RFA1DriverLayerP__McuPowerOverride__lowestState(void )
 {
@@ -15002,8 +12978,6 @@ inline static mcu_power_t McuSleepC__McuPowerOverride__lowestState(void ){
 
 #line 62
   __nesc_result = RFA1DriverLayerP__McuPowerOverride__lowestState();
-#line 62
-  __nesc_result = mcombine(__nesc_result, HplAtm128SpiP__McuPowerOverride__lowestState());
 #line 62
   __nesc_result = mcombine(__nesc_result, HplAtmRfa1TimerMacP__McuPowerOverride__lowestState());
 #line 62
@@ -15568,11 +13542,11 @@ static error_t RFA1DriverLayerP__RadioSend__send(message_t *msg)
     {
       RFA1DriverLayerP__txPower = length;
 
-      * (volatile uint8_t *)0x145 = (RFA1_PA_BUF_LT | RFA1_PA_LT) | (RFA1DriverLayerP__txPower << 0);
-      * (volatile uint8_t *)0x145 = (RFA1_PA_BUF_LT | RFA1_PA_LT) | (RFA1DriverLayerP__txPower << 0);
+
+
+
+      * (volatile uint8_t *)0x145 = RFA1DriverLayerP__txPower << 0;
     }
-
-
 
 
 
@@ -15616,10 +13590,10 @@ static error_t RFA1DriverLayerP__RadioSend__send(message_t *msg)
       ant = RFA1DriverLayerP__AntennaDiversityConfig__txModeGet() & ANTDIV_TXMODE_MASK;
     }
 
-  * (volatile uint8_t *)0x14D = (* (volatile uint8_t *)0x14D & ~0x03) | ant;
-  * (volatile uint8_t *)0x14D = (* (volatile uint8_t *)0x14D & ~0x03) | ant;
 
 
+
+  * (volatile uint8_t *)0x14D = (* (volatile uint8_t *)0x14D & ~0x03) | ant;
 
   if (ant == 2) {
       * (volatile uint8_t *)(0x14 + 0x20) |= 1 << 1;
@@ -15723,57 +13697,6 @@ __attribute((signal))   void __vector_67(void )
   HplAtmRfa1TimerMacP__CompareC__fired();
 }
 
-# 127 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-__attribute((signal))   void __vector_24(void )
-#line 127
-{
-  HplAtm128SpiP__SPI__dataReady(HplAtm128SpiP__SPI__read());
-}
-
-
-
-
-
-
-
-
-
-
-static void HplAtm128SpiP__SPI__enableInterrupt(bool enabled)
-#line 140
-{
-  if (enabled) {
-      * (volatile uint8_t *)(0x2C + 0x20) |= 1 << 7;
-      HplAtm128SpiP__Mcu__update();
-    }
-  else {
-      * (volatile uint8_t *)(0x2C + 0x20) &= ~(1 << 7);
-      HplAtm128SpiP__Mcu__update();
-    }
-}
-
-# 167 "/home/wangqi/platforms2013/tinyos-main/tos/chips/atm128rfa1/spi/Atm128SpiP.nc"
-static uint8_t /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__SpiByte__write(uint8_t tx)
-#line 167
-{
-
-
-
-
-
-
-
-
-
-
-  /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__write(tx);
-
-  while (!/*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__isInterruptPending()) 
-    ;
-
-  return /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__Spi__read();
-}
-
 # 63 "/home/wangqi/platforms2013/tinyos-main/tos/system/RealMainP.nc"
   int main(void )
 #line 63
@@ -15862,13 +13785,13 @@ static void SchedulerBasicP__TaskBasic__default__runTask(uint8_t id)
 }
 
 # 75 "/home/wangqi/platforms2013/tinyos-main/tos/interfaces/TaskBasic.nc"
-static void SchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x2b7642da8020){
+static void SchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x2b4d6f4c6020){
 #line 75
-  switch (arg_0x2b7642da8020) {
+  switch (arg_0x2b4d6f4c6020) {
 #line 75
-    case Max706P__wd_task:
+    case WatchDogP__wd_task:
 #line 75
-      Max706P__wd_task__runTask();
+      WatchDogP__wd_task__runTask();
 #line 75
       break;
 #line 75
@@ -15884,21 +13807,9 @@ static void SchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x2b7642da8020){
 #line 75
       break;
 #line 75
-    case /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__zeroTask:
+    case /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask:
 #line 75
-      /*Atm128SpiC.SpiMaster*/Atm128SpiP__0__zeroTask__runTask();
-#line 75
-      break;
-#line 75
-    case /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__grantedTask:
-#line 75
-      /*Atm128SpiC.Arbiter.Arbiter*/SimpleArbiterP__0__grantedTask__runTask();
-#line 75
-      break;
-#line 75
-    case /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask:
-#line 75
-      /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask__runTask();
+      /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask__runTask();
 #line 75
       break;
 #line 75
@@ -15940,7 +13851,7 @@ static void SchedulerBasicP__TaskBasic__runTask(uint8_t arg_0x2b7642da8020){
 #line 75
     default:
 #line 75
-      SchedulerBasicP__TaskBasic__default__runTask(arg_0x2b7642da8020);
+      SchedulerBasicP__TaskBasic__default__runTask(arg_0x2b4d6f4c6020);
 #line 75
       break;
 #line 75
@@ -16036,23 +13947,23 @@ static void TaskletC__Tasklet__resume(void )
 }
 
 # 96 "/home/wangqi/platforms2013/tinyos-main/tos/system/SimpleArbiterP.nc"
-static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Resource__release(uint8_t id)
+static error_t /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Resource__release(uint8_t id)
 #line 96
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
 #line 97
     {
-      if (/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__state == /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__RES_BUSY && /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId == id) {
-          if (/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue__isEmpty() == FALSE) {
-              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__Queue__dequeue();
-              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__RES_GRANTING;
-              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__grantedTask__postTask();
+      if (/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__state == /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__RES_BUSY && /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId == id) {
+          if (/*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Queue__isEmpty() == FALSE) {
+              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__Queue__dequeue();
+              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__RES_GRANTING;
+              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__grantedTask__postTask();
             }
           else {
-              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__resId = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__NO_RES;
-              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__RES_IDLE;
+              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__resId = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__NO_RES;
+              /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__state = /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__RES_IDLE;
             }
-          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__1__ResourceConfigure__unconfigure(id);
+          /*RFA1RadioC.SendResourceC.Arbiter*/SimpleArbiterP__0__ResourceConfigure__unconfigure(id);
           {
             unsigned char __nesc_temp = 
 #line 109
@@ -16142,20 +14053,6 @@ static error_t /*RFA1RadioC.MessageBufferLayerC.MessageBufferLayerP*/MessageBuff
 static uint8_t /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__RadioPacket__headerLength(message_t *msg)
 {
   return /*RFA1RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP__0__SubPacket__headerLength(msg) + sizeof(activemessage_header_t );
-}
-
-# 155 "/home/wangqi/platforms2013/tinyos-main/tos/platforms/tpa/HplAtm128SpiP.nc"
-static void HplAtm128SpiP__SPI__enableSpi(bool enabled)
-#line 155
-{
-  if (enabled) {
-      * (volatile uint8_t *)(0x2C + 0x20) |= 1 << 6;
-      HplAtm128SpiP__Mcu__update();
-    }
-  else {
-      * (volatile uint8_t *)(0x2C + 0x20) &= ~(1 << 6);
-      HplAtm128SpiP__Mcu__update();
-    }
 }
 
 # 73 "/home/wangqi/platforms2013/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
