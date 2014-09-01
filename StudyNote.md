@@ -45,20 +45,28 @@ ${VARNAME}   例如：$ {CC}
 ###依赖关系
 依赖关系是makefile的核心内容，依赖关系的格式如下：
 `dependecy1：dependencyA dependencyB ... dependencyN`
+
   `command for dependency1`
+
 **依赖关系中的命令必须以Tab开头，从而使make工具知道这个依赖关系的命令**
 上述代码理解如下：dependency1文件生成依赖于dependencyA，dependencyB等文件。而command告诉编译器如何利用这些依赖关系文件产生dependency1。当make工具发现dependency1是建立在dependencyA依赖之上，就会在makefile里查找依赖文件dependencyA的定义。例如：
+
 `myfrogram：mainprog.cc myclass.cc`
   `gcc mainprog.cc myclass.cc`
+
 上述代码理解如下：这是一个makefile文件当输入make命令后，编译系统就会知道要编译生成myprogram文件，紧接着编译系统查看mainprog.cc文件，了解最后一次更改的时间，如果该文件在最后一次编译后有过更新，就执行gcc mainprog.cc myclass.cc 命令。如果没有更新，就查看myclass文件是否更改过，如果更改过，就执行gcc mainprog.cc myclass.cc命令。否则对这条规则不采取任何操作。
 ###变量和依赖关系的结合
 当makefile定义了变量之后，就可以在依赖关系里使用该变量。例如：
+
 `COMPILER = gcc`
 `CCFLAGS = -g`
 `myprogram:mainprog.cc subfile.o myclass.o`
 `  ${COMIPLER}${CCFLAGS}mainprog.cc subfile.o myclass.o`
+
 **为了能够清除掉某些编译生成的文件，只需要在makefile中增加一个新的依赖关系，即clean依赖关系代码如下：**
+
 `clean:`
 `  rm -rf *.o a.out`
+
 当执行`make clean`命令时，会移除所有已经生成的目标文件和可执行文件。
 
