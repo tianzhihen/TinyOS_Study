@@ -75,4 +75,9 @@ ${VARNAME}   例如：$ {CC}
 `  rm -rf *.o a.out`
 
 当执行`make clean`命令时，会移除所有已经生成的目标文件和可执行文件。
-
+"`void main()
+{
+    a++;
+    b++;
+    return;
+}`"
