@@ -75,8 +75,52 @@ ${VARNAME}   例如：$ {CC}
 `  rm -rf *.o a.out`
 
 当执行`make clean`命令时，会移除所有已经生成的目标文件和可执行文件。
-“`ruby
-  def add(a, b)
-    return a + b
-  end
-“`
+###编写makefile文件
+tinyos的makefile文件最简形式如下
+
+`COMPONENT=TopLevelComponent`  //指明顶层配件，从这里开始编译程序
+
+`include $(MAKERULES)`         //包含nesc的编译规则
+
+Tinyos应用程序一般给nesC编译器指明一些参数选项，用以创建一些额外的文件。以app/RadioCountToLeds程序为例，分析它的makefile文件RadioCountToLeds的makefile使用MIG工具生成一些文件来描述信息的结构，也是用了python工具和java工具。
+
+`COMPONENT=RadioCountToLedsAppC`
+
+`BUILD_EXTRAL_DEPS=RadioCountMsg.py RadioCountMsg.class`
+
+`RadioCountMsg.py:RadioCountToLeds.h`
+
+`  MIG python -target=$(PLATFORM)$(CFLAGS) -python-calssname=RadioCountMsg`
+
+`RadioCountToLeds.h RadioCountMSG -o $@`
+
+`RadioCountMSG.calss:RadioCountMsg.java`
+
+`  javac RadioCountMsg.java`
+
+`RadioCountMsg.java:RadioCountMsg.h`
+
+`  MIG java -target=$(PLATFORM)$(CFLAGS) -java-classname=RadioCountMsg`
+
+`RadioCountToLeds.h RadioCountMsg -o $@`
+
+`include $(MAKERULES)`
+
+1.上述代码的第一行和最后一行是所有tinyos程序的makefile的基本格式，最后一行包含tinyos编译系统的路径（/support/make）
+2.上述代码第二行指明除了生成目标文件外还要生成额外的文件mZ3.根据当前编写的Makefile文件外这些生成的文件不会被“make clean”命令清除掉。为此，为此可以增加以下命令到makefile中：
+
+`CLEAN_EXTRAL=$(BUILD_EXTRAL_DEPS)RadioCountMsg.java`
+
+CLEAN\_EXTRAL定义的变量除了BUILD\_EXTRAL\_DEPS定义的变量外还追加了RadioCountMsg.java 这样当执行make clean命令后就会删除CLEAN\_EXTRAL指名的文件
+
+3.可以修改RadioCountToLeds的源码使用预处理符号SEND\_PERIOD设定消息的发送周期
+
+`call MilliTimer.startPeriodic(SEND_PERIOD)`
+
+并将以下代码添加到MakeFile中
+
+`CFLAGS+=-D SEND_PERIOD=2000`
+
+**CFLAGS选项的定义使用‘+=’符号，也可以在调用make命令时传递该参数选项给nesc编译器**
+
+
